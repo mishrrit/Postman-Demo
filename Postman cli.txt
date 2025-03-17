@@ -1,0 +1,75 @@
+Postman cli 
+Installation: https://learning.postman.com/docs/postman-cli/postman-cli-installation/
+
+Windows: 
+
+powershell.exe -NoProfile -InputFormat None -ExecutionPolicy AllSigned -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://dl-cli.pstmn.io/install/win64.ps1'))"
+
+--verify
+postman -v
+
+--using env variables
+ postman collection run .\sample-collection.json -e .\Test.postman_environment.json
+
+detailed (use --verbose)
+ postman collection run .\sample-collection.json -e .\Test.postman_environment.json --verbose
+
+--env variable
+postman collection run .\sample-collection.json -e .\Test.postman_environment.json --
+
+
+swagger : https://petstore.swagger.io/v2/swagger.json
+
+
+Types of testing in Postman
+
+Functional Testing
+Sanity Testing
+Smoke Testing
+Regression Testing
+
+
+What else could be done with postman
+
+1.Running collection using command line tool
+
+	newman - open source tool- can be integrated with any open source ci/cd
+		installation: npm install -g newman
+		
+		Parameter		Description					Example
+		-e			Use an environment file				-e env.json
+		-g			Use global variables				-g globals.json
+		--env-var		Set environment variable dynamically		--env-var baseUrl="https://api.com"
+		--global-var		Set global variable dynamically			--global-var token="abcd1234"
+		-d			Run data-driven tests (CSV/JSON)		-d data.csv
+		-r			Generate reports (cli, html, json, junit)	-r html
+		--iteration-count	Run collection multiple times			--iteration-count 5
+		--delay-request		Add delay between requests (ms)			--delay-request 500
+		--insecure		Ignore SSL errors				--insecure
+		--disable-unicode	Disable Unicode output for CI/CD		--disable-unicode
+		
+
+
+
+Performance Testing
+	UI
+		Fixed - 20 virtual users run for 1 minute, each executing all requests sequentially.
+		Ramp Up - 5 virtual users run for 15 seconds, ramp up to 20 for 15 seconds, then maintain 20 for 30 seconds, each executing all requests 			sequentially.
+		Spike - 2 virtual users run for 24 seconds, spikes to 20 over 6 seconds, drops to 2 over 6 seconds, maintains 2 for 24 seconds, each 				executing all requests sequentially.
+		Peak - 4 virtual users run for 12 seconds, ramp up to 20 over 12 seconds, maintains 20 for 12 seconds, decrease to 4 over 12 seconds, 				maintains 4 for 12 seconds, each executing all requests sequentially.
+	Command Line
+		Postman Cli
+		Newman
+
+
+
+
+
+
+
+
+
+
+
+
+

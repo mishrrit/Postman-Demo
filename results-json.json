@@ -1,0 +1,974 @@
+{
+  "collection": {
+    "item": [
+      {
+        "id": "d7c09a7b-010d-4691-9b53-0ac3bd87d57b",
+        "name": "Get Users",
+        "request": {
+          "url": {
+            "path": [
+              "users"
+            ],
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": [],
+        "event": []
+      },
+      {
+        "id": "4ede9508-8c78-4701-ab73-6ed40cd5d0bf",
+        "name": "Create User",
+        "request": {
+          "url": {
+            "path": [
+              "users"
+            ],
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\"name\": \"John Doe\", \"email\": \"john.doe@example.com\"}"
+          }
+        },
+        "response": [],
+        "event": []
+      },
+      {
+        "id": "4d82853d-2856-4ec9-b244-773763fed06e",
+        "name": "Update User",
+        "request": {
+          "url": {
+            "path": [
+              "users",
+              "1"
+            ],
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "method": "PUT",
+          "body": {
+            "mode": "raw",
+            "raw": "{\"name\": \"John Doe Updated\", \"email\": \"john.doe@example.com\"}"
+          }
+        },
+        "response": [],
+        "event": []
+      },
+      {
+        "id": "ec2d6e53-9025-4258-8bb6-06b77adae6aa",
+        "name": "Delete User",
+        "request": {
+          "url": {
+            "path": [
+              "users",
+              "1"
+            ],
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "DELETE"
+        },
+        "response": [],
+        "event": []
+      }
+    ],
+    "event": [],
+    "variable": [],
+    "info": {
+      "_postman_id": "2769b19c-374f-4c2b-90f9-c9a33f94dfbf",
+      "name": "Sample Collection",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+      "description": {
+        "content": "This is a sample Postman collection for demonstrating API requests.",
+        "type": "text/plain"
+      }
+    }
+  },
+  "environment": {
+    "id": "5e3a859b-b55c-4198-9256-41adf5f007d8",
+    "values": []
+  },
+  "globals": {
+    "id": "9c69429e-ff71-48b6-b62f-71f6da74d235",
+    "values": []
+  },
+  "run": {
+    "stats": {
+      "iterations": {
+        "total": 1,
+        "pending": 0,
+        "failed": 0
+      },
+      "items": {
+        "total": 4,
+        "pending": 0,
+        "failed": 0
+      },
+      "scripts": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequests": {
+        "total": 4,
+        "pending": 0,
+        "failed": 0
+      },
+      "requests": {
+        "total": 4,
+        "pending": 0,
+        "failed": 4
+      },
+      "tests": {
+        "total": 4,
+        "pending": 0,
+        "failed": 0
+      },
+      "assertions": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      },
+      "testScripts": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequestScripts": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      }
+    },
+    "timings": {
+      "responseAverage": 0,
+      "responseMin": 0,
+      "responseMax": 0,
+      "responseSd": 0,
+      "dnsAverage": 0,
+      "dnsMin": 0,
+      "dnsMax": 0,
+      "dnsSd": 0,
+      "firstByteAverage": 0,
+      "firstByteMin": 0,
+      "firstByteMax": 0,
+      "firstByteSd": 0,
+      "started": 1742140495218,
+      "completed": 1742140495602
+    },
+    "executions": [
+      {
+        "cursor": {
+          "position": 0,
+          "iteration": 0,
+          "length": 4,
+          "cycles": 1,
+          "empty": false,
+          "eof": false,
+          "bof": true,
+          "cr": false,
+          "ref": "8cde0f0b-8ad4-44f3-a712-7dc767153ec2",
+          "httpRequestId": "fa6d6df5-68a2-413d-b7a8-cac6f483b40b"
+        },
+        "item": {
+          "id": "d7c09a7b-010d-4691-9b53-0ac3bd87d57b",
+          "name": "Get Users",
+          "request": {
+            "url": {
+              "path": [
+                "users"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "path": [
+              "users"
+            ],
+            "host": [
+              "{{baseurl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "506002a0-74f9-48b8-b6f5-598b7c035670",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "{{baseurl}}",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "GET"
+        },
+        "id": "d7c09a7b-010d-4691-9b53-0ac3bd87d57b",
+        "requestError": {
+          "errno": -3008,
+          "code": "ENOTFOUND",
+          "syscall": "getaddrinfo",
+          "hostname": "{{baseurl}}"
+        }
+      },
+      {
+        "cursor": {
+          "ref": "e4685408-bebd-471d-9be7-fb93f88e2252",
+          "length": 4,
+          "cycles": 1,
+          "position": 1,
+          "iteration": 0,
+          "httpRequestId": "efbf7c1b-380c-411d-bffe-44f6fb18d69a"
+        },
+        "item": {
+          "id": "4ede9508-8c78-4701-ab73-6ed40cd5d0bf",
+          "name": "Create User",
+          "request": {
+            "url": {
+              "path": [
+                "users"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\": \"John Doe\", \"email\": \"john.doe@example.com\"}"
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "path": [
+              "users"
+            ],
+            "host": [
+              "{{baseurl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "f3cdda30-6529-4f9d-a2fd-3aced246ada2",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "{{baseurl}}",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\"name\": \"John Doe\", \"email\": \"john.doe@example.com\"}"
+          }
+        },
+        "id": "4ede9508-8c78-4701-ab73-6ed40cd5d0bf",
+        "requestError": {
+          "errno": -3008,
+          "code": "ENOTFOUND",
+          "syscall": "getaddrinfo",
+          "hostname": "{{baseurl}}"
+        }
+      },
+      {
+        "cursor": {
+          "ref": "34a20671-0b27-47a4-9fde-098ec9896159",
+          "length": 4,
+          "cycles": 1,
+          "position": 2,
+          "iteration": 0,
+          "httpRequestId": "dae6d3d1-b940-46b2-8ee1-d31230d46193"
+        },
+        "item": {
+          "id": "4d82853d-2856-4ec9-b244-773763fed06e",
+          "name": "Update User",
+          "request": {
+            "url": {
+              "path": [
+                "users",
+                "1"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\": \"John Doe Updated\", \"email\": \"john.doe@example.com\"}"
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "path": [
+              "users",
+              "1"
+            ],
+            "host": [
+              "{{baseurl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "ee549326-d3f8-4560-b5fc-5df2c8003807",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "{{baseurl}}",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "PUT",
+          "body": {
+            "mode": "raw",
+            "raw": "{\"name\": \"John Doe Updated\", \"email\": \"john.doe@example.com\"}"
+          }
+        },
+        "id": "4d82853d-2856-4ec9-b244-773763fed06e",
+        "requestError": {
+          "errno": -3008,
+          "code": "ENOTFOUND",
+          "syscall": "getaddrinfo",
+          "hostname": "{{baseurl}}"
+        }
+      },
+      {
+        "cursor": {
+          "ref": "be357c1e-502d-4c1e-a497-c823fdf3944a",
+          "length": 4,
+          "cycles": 1,
+          "position": 3,
+          "iteration": 0,
+          "httpRequestId": "9a102bfa-c51c-4a9f-87ed-5058b5043a7b"
+        },
+        "item": {
+          "id": "ec2d6e53-9025-4258-8bb6-06b77adae6aa",
+          "name": "Delete User",
+          "request": {
+            "url": {
+              "path": [
+                "users",
+                "1"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "DELETE"
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "path": [
+              "users",
+              "1"
+            ],
+            "host": [
+              "{{baseurl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "b9490b50-aff5-43dd-ad1d-f4b0167d19cc",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "{{baseurl}}",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "DELETE"
+        },
+        "id": "ec2d6e53-9025-4258-8bb6-06b77adae6aa",
+        "requestError": {
+          "errno": -3008,
+          "code": "ENOTFOUND",
+          "syscall": "getaddrinfo",
+          "hostname": "{{baseurl}}"
+        }
+      }
+    ],
+    "transfers": {
+      "responseTotal": 0
+    },
+    "failures": [
+      {
+        "error": {
+          "errno": -3008,
+          "code": "ENOTFOUND",
+          "syscall": "getaddrinfo",
+          "hostname": "{{baseurl}}",
+          "name": "Error",
+          "message": "getaddrinfo ENOTFOUND {{baseurl}}",
+          "stack": "Error: getaddrinfo ENOTFOUND {{baseurl}}\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)",
+          "checksum": "e4e09b534483abb22008f0ea70abb5aa",
+          "id": "a7fbb22c-fbf2-421b-bcab-7eeb73265ef3",
+          "timestamp": 1742140495288,
+          "stacktrace": [
+            {
+              "fileName": "node:dns",
+              "lineNumber": 120,
+              "functionName": "GetAddrInfoReqWrap.onlookupall [as oncomplete]",
+              "typeName": "GetAddrInfoReqWrap",
+              "methodName": "onlookupall [as oncomplete]",
+              "columnNumber": 26,
+              "native": false
+            }
+          ]
+        },
+        "at": "request",
+        "source": {
+          "id": "d7c09a7b-010d-4691-9b53-0ac3bd87d57b",
+          "name": "Get Users",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "path": [
+                "users"
+              ],
+              "host": [
+                "{{baseurl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "User-Agent",
+                "value": "PostmanRuntime/7.39.1",
+                "system": true
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "system": true
+              },
+              {
+                "key": "Cache-Control",
+                "value": "no-cache",
+                "system": true
+              },
+              {
+                "key": "Postman-Token",
+                "value": "506002a0-74f9-48b8-b6f5-598b7c035670",
+                "system": true
+              },
+              {
+                "key": "Host",
+                "value": "{{baseurl}}",
+                "system": true
+              },
+              {
+                "key": "Accept-Encoding",
+                "value": "gzip, deflate, br",
+                "system": true
+              },
+              {
+                "key": "Connection",
+                "value": "keep-alive",
+                "system": true
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        },
+        "cursor": {
+          "position": 0,
+          "iteration": 0,
+          "length": 4,
+          "cycles": 1,
+          "empty": false,
+          "eof": false,
+          "bof": true,
+          "cr": false,
+          "ref": "8cde0f0b-8ad4-44f3-a712-7dc767153ec2",
+          "httpRequestId": "fa6d6df5-68a2-413d-b7a8-cac6f483b40b"
+        }
+      },
+      {
+        "error": {
+          "errno": -3008,
+          "code": "ENOTFOUND",
+          "syscall": "getaddrinfo",
+          "hostname": "{{baseurl}}",
+          "name": "Error",
+          "message": "getaddrinfo ENOTFOUND {{baseurl}}",
+          "stack": "Error: getaddrinfo ENOTFOUND {{baseurl}}\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)",
+          "checksum": "e4e09b534483abb22008f0ea70abb5aa",
+          "id": "1f98c06d-34cd-4e9c-82e0-3d23cf28db22",
+          "timestamp": 1742140495371,
+          "stacktrace": [
+            {
+              "fileName": "node:dns",
+              "lineNumber": 120,
+              "functionName": "GetAddrInfoReqWrap.onlookupall [as oncomplete]",
+              "typeName": "GetAddrInfoReqWrap",
+              "methodName": "onlookupall [as oncomplete]",
+              "columnNumber": 26,
+              "native": false
+            }
+          ]
+        },
+        "at": "request",
+        "source": {
+          "id": "4ede9508-8c78-4701-ab73-6ed40cd5d0bf",
+          "name": "Create User",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "path": [
+                "users"
+              ],
+              "host": [
+                "{{baseurl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "User-Agent",
+                "value": "PostmanRuntime/7.39.1",
+                "system": true
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "system": true
+              },
+              {
+                "key": "Cache-Control",
+                "value": "no-cache",
+                "system": true
+              },
+              {
+                "key": "Postman-Token",
+                "value": "f3cdda30-6529-4f9d-a2fd-3aced246ada2",
+                "system": true
+              },
+              {
+                "key": "Host",
+                "value": "{{baseurl}}",
+                "system": true
+              },
+              {
+                "key": "Accept-Encoding",
+                "value": "gzip, deflate, br",
+                "system": true
+              },
+              {
+                "key": "Connection",
+                "value": "keep-alive",
+                "system": true
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\": \"John Doe\", \"email\": \"john.doe@example.com\"}"
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        "cursor": {
+          "ref": "e4685408-bebd-471d-9be7-fb93f88e2252",
+          "length": 4,
+          "cycles": 1,
+          "position": 1,
+          "iteration": 0,
+          "httpRequestId": "efbf7c1b-380c-411d-bffe-44f6fb18d69a"
+        }
+      },
+      {
+        "error": {
+          "errno": -3008,
+          "code": "ENOTFOUND",
+          "syscall": "getaddrinfo",
+          "hostname": "{{baseurl}}",
+          "name": "Error",
+          "message": "getaddrinfo ENOTFOUND {{baseurl}}",
+          "stack": "Error: getaddrinfo ENOTFOUND {{baseurl}}\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)",
+          "checksum": "e4e09b534483abb22008f0ea70abb5aa",
+          "id": "f30109f0-4898-4bf7-abd6-abf669656245",
+          "timestamp": 1742140495460,
+          "stacktrace": [
+            {
+              "fileName": "node:dns",
+              "lineNumber": 120,
+              "functionName": "GetAddrInfoReqWrap.onlookupall [as oncomplete]",
+              "typeName": "GetAddrInfoReqWrap",
+              "methodName": "onlookupall [as oncomplete]",
+              "columnNumber": 26,
+              "native": false
+            }
+          ]
+        },
+        "at": "request",
+        "source": {
+          "id": "4d82853d-2856-4ec9-b244-773763fed06e",
+          "name": "Update User",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "path": [
+                "users",
+                "1"
+              ],
+              "host": [
+                "{{baseurl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "User-Agent",
+                "value": "PostmanRuntime/7.39.1",
+                "system": true
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "system": true
+              },
+              {
+                "key": "Cache-Control",
+                "value": "no-cache",
+                "system": true
+              },
+              {
+                "key": "Postman-Token",
+                "value": "ee549326-d3f8-4560-b5fc-5df2c8003807",
+                "system": true
+              },
+              {
+                "key": "Host",
+                "value": "{{baseurl}}",
+                "system": true
+              },
+              {
+                "key": "Accept-Encoding",
+                "value": "gzip, deflate, br",
+                "system": true
+              },
+              {
+                "key": "Connection",
+                "value": "keep-alive",
+                "system": true
+              }
+            ],
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\": \"John Doe Updated\", \"email\": \"john.doe@example.com\"}"
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        "cursor": {
+          "ref": "34a20671-0b27-47a4-9fde-098ec9896159",
+          "length": 4,
+          "cycles": 1,
+          "position": 2,
+          "iteration": 0,
+          "httpRequestId": "dae6d3d1-b940-46b2-8ee1-d31230d46193"
+        }
+      },
+      {
+        "error": {
+          "errno": -3008,
+          "code": "ENOTFOUND",
+          "syscall": "getaddrinfo",
+          "hostname": "{{baseurl}}",
+          "name": "Error",
+          "message": "getaddrinfo ENOTFOUND {{baseurl}}",
+          "stack": "Error: getaddrinfo ENOTFOUND {{baseurl}}\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)",
+          "checksum": "e4e09b534483abb22008f0ea70abb5aa",
+          "id": "ab4de325-d4bb-4a03-b111-1e17c36f6fa8",
+          "timestamp": 1742140495555,
+          "stacktrace": [
+            {
+              "fileName": "node:dns",
+              "lineNumber": 120,
+              "functionName": "GetAddrInfoReqWrap.onlookupall [as oncomplete]",
+              "typeName": "GetAddrInfoReqWrap",
+              "methodName": "onlookupall [as oncomplete]",
+              "columnNumber": 26,
+              "native": false
+            }
+          ]
+        },
+        "at": "request",
+        "source": {
+          "id": "ec2d6e53-9025-4258-8bb6-06b77adae6aa",
+          "name": "Delete User",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "path": [
+                "users",
+                "1"
+              ],
+              "host": [
+                "{{baseurl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "User-Agent",
+                "value": "PostmanRuntime/7.39.1",
+                "system": true
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "system": true
+              },
+              {
+                "key": "Cache-Control",
+                "value": "no-cache",
+                "system": true
+              },
+              {
+                "key": "Postman-Token",
+                "value": "b9490b50-aff5-43dd-ad1d-f4b0167d19cc",
+                "system": true
+              },
+              {
+                "key": "Host",
+                "value": "{{baseurl}}",
+                "system": true
+              },
+              {
+                "key": "Accept-Encoding",
+                "value": "gzip, deflate, br",
+                "system": true
+              },
+              {
+                "key": "Connection",
+                "value": "keep-alive",
+                "system": true
+              }
+            ],
+            "method": "DELETE"
+          },
+          "response": [],
+          "event": []
+        },
+        "cursor": {
+          "ref": "be357c1e-502d-4c1e-a497-c823fdf3944a",
+          "length": 4,
+          "cycles": 1,
+          "position": 3,
+          "iteration": 0,
+          "httpRequestId": "9a102bfa-c51c-4a9f-87ed-5058b5043a7b"
+        }
+      }
+    ],
+    "error": null
+  }
+}
