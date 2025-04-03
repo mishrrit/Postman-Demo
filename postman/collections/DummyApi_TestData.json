@@ -1,0 +1,18 @@
+ [
+    {
+      "name": "John Doe",
+      "salary": "5000",
+      "age": "30"
+    },
+    {
+      "name": "Alice Smith",
+      "salary": "6000",
+      "age": "28"
+    },
+    {
+      "name": "Bob Johnson",
+      "salary": "5500",
+      "age": "35"
+    }
+  ]
+

@@ -1,0 +1,96 @@
+{
+    "info": {
+        "name": "API Testing Reloaded - Sample Collection",
+        "_postman_id": "abcd-1234-efgh-5678",
+        "description": "Sample collection for API Testing Reloaded session",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "GET Users",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "https://reqres.in/api/users?page=2",
+                    "protocol": "https",
+                    "host": [
+                        "reqres",
+                        "in"
+                    ],
+                    "path": [
+                        "api",
+                        "users"
+                    ],
+                    "query": [
+                        {
+                            "key": "page",
+                            "value": "2"
+                        }
+                    ]
+                }
+            },
+            "event": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [
+                            "pm.test(\"Status code is 200\", function () {",
+                            "    pm.response.to.have.status(200);",
+                            "});",
+                            "pm.test(\"Response time is less than 500ms\", function () {",
+                            "    pm.expect(pm.response.responseTime).to.be.below(500);",
+                            "});"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "POST Create User",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"name\": \"morpheus\", \"job\": \"leader\"}"
+                },
+                "url": {
+                    "raw": "https://reqres.in/api/users",
+                    "protocol": "https",
+                    "host": [
+                        "reqres",
+                        "in"
+                    ],
+                    "path": [
+                        "api",
+                        "users"
+                    ]
+                }
+            },
+            "event": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [
+                            "pm.test(\"Status code is 201\", function () {",
+                            "    pm.response.to.have.status(201);",
+                            "});",
+                            "pm.test(\"ID is present\", function () {",
+                            "    var jsonData = pm.response.json();",
+                            "    pm.expect(jsonData).to.have.property('id');",
+                            "});"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ]
+        }
+    ]
+}
