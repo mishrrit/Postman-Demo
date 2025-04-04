@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "bbe39f1c-2e3a-4073-86db-0325e7559605",
+		"_postman_id": "fc71f201-d945-45fd-b5d1-81bb4a8bc8d8",
 		"name": "Pet Store",
 		"description": "This is a sample Pet Store Server based on the OpenAPI 3.0 specification.  You can find out more about\nSwagger at [https://swagger.io](https://swagger.io). In the third iteration of the pet store, we've switched to the design first approach!\nYou can now help us improve the API whether it's by making changes to the definition itself or to the code.\nThat way, with time, we can improve the API in general, and expose some of the new features in OAS3.\n\n_If you're looking for the Swagger 2.0/OAS 2.0 version of Petstore, then click [here](https://editor.swagger.io/?url=https://petstore.swagger.io/v2/swagger.yaml). Alternatively, you can load via the `Edit > Load Petstore OAS 2.0` menu option!_\n\nSome useful links:\n- [The Pet Store repository](https://github.com/swagger-api/swagger-petstore)\n- [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)\n\nContact Support:\n Email: apiteam@swagger.io",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "4969429"
+		"_uid": "4969429-fc71f201-d945-45fd-b5d1-81bb4a8bc8d8"
 	},
 	"item": [
 		{
@@ -25,10 +25,12 @@
 											"pm.environment.set(\"petId\", petId);"
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"id": "b6ed20d0-6250-4d7b-8f5f-8fe8fdd0df89"
 									}
 								}
 							],
+							"id": "11af1783-120e-4fee-b26e-d0502baa0706",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -101,6 +103,7 @@
 							},
 							"response": [
 								{
+									"id": "b24b0397-1373-4af9-a7c4-95eaf146e5d5",
 									"name": "Successful operation",
 									"originalRequest": {
 										"method": "POST",
@@ -169,6 +172,7 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -179,6 +183,7 @@
 									"body": "{\n  \"name\": \"doggie\",\n  \"photoUrls\": [\n    \"consectetur aliqua deserunt\",\n    \"sunt ullamco dolor\"\n  ],\n  \"id\": 10,\n  \"category\": {\n    \"id\": 1,\n    \"name\": \"Dogs\"\n  },\n  \"tags\": [\n    {\n      \"id\": -6177331,\n      \"name\": \"c\"\n    },\n    {\n      \"id\": 52579439,\n      \"name\": \"ea in enim magna\"\n    }\n  ],\n  \"status\": \"available\"\n}"
 								},
 								{
+									"id": "94db1155-9736-48bf-8d43-32138c14d27d",
 									"name": "Invalid input",
 									"originalRequest": {
 										"method": "POST",
@@ -247,6 +252,7 @@
 									"status": "Method Not Allowed",
 									"code": 405,
 									"_postman_previewlanguage": "text",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -260,6 +266,7 @@
 						},
 						{
 							"name": "Find pet by ID",
+							"id": "e26e8686-f357-4fd4-9764-9be8c1e17a22",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -289,6 +296,7 @@
 							},
 							"response": [
 								{
+									"id": "14777691-1d7a-4c1f-a660-c50170c5d2a4",
 									"name": "successful operation",
 									"originalRequest": {
 										"method": "GET",
@@ -320,6 +328,7 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -330,6 +339,7 @@
 									"body": "{\n  \"name\": \"doggie\",\n  \"photoUrls\": [\n    \"consectetur aliqua deserunt\",\n    \"sunt ullamco dolor\"\n  ],\n  \"id\": 10,\n  \"category\": {\n    \"id\": 1,\n    \"name\": \"Dogs\"\n  },\n  \"tags\": [\n    {\n      \"id\": -6177331,\n      \"name\": \"c\"\n    },\n    {\n      \"id\": 52579439,\n      \"name\": \"ea in enim magna\"\n    }\n  ],\n  \"status\": \"available\"\n}"
 								},
 								{
+									"id": "ad38fa27-ccb5-49b7-823d-e54d1eb75cc9",
 									"name": "Invalid ID supplied",
 									"originalRequest": {
 										"method": "GET",
@@ -361,6 +371,7 @@
 									"status": "Bad Request",
 									"code": 400,
 									"_postman_previewlanguage": "text",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -371,6 +382,7 @@
 									"body": ""
 								},
 								{
+									"id": "6f98623b-546b-49e8-829c-0c88281c945b",
 									"name": "Pet not found",
 									"originalRequest": {
 										"method": "GET",
@@ -402,6 +414,7 @@
 									"status": "Not Found",
 									"code": 404,
 									"_postman_previewlanguage": "text",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -425,10 +438,12 @@
 											"pm.environment.set(\"petId\", petId);"
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"id": "e2ebfb69-0b62-449c-a678-5a3f8bafb460"
 									}
 								}
 							],
+							"id": "79f5b1a0-8fe2-4e64-a746-1889dcc13d6e",
 							"request": {
 								"method": "POST",
 								"header": [],
@@ -468,6 +483,7 @@
 							},
 							"response": [
 								{
+									"id": "efa18feb-9356-4c68-b26a-4af98538f0bc",
 									"name": "Invalid input",
 									"originalRequest": {
 										"method": "POST",
@@ -509,6 +525,7 @@
 									"status": "Method Not Allowed",
 									"code": 405,
 									"_postman_previewlanguage": "text",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -522,6 +539,7 @@
 						},
 						{
 							"name": "Deletes a pet",
+							"id": "a9d816d8-a9b7-4793-a1c2-4ee8b0d07e2a",
 							"request": {
 								"method": "DELETE",
 								"header": [
@@ -551,6 +569,7 @@
 							},
 							"response": [
 								{
+									"id": "e9c0a5cc-e3f1-40b6-af80-573a0e4f9bae",
 									"name": "Invalid pet value",
 									"originalRequest": {
 										"method": "DELETE",
@@ -586,6 +605,7 @@
 									"status": "Bad Request",
 									"code": 400,
 									"_postman_previewlanguage": "text",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -599,6 +619,7 @@
 						},
 						{
 							"name": "uploads an image",
+							"id": "002a10cc-0c84-40ed-bb72-5fe4b2c6f239",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -643,6 +664,7 @@
 							},
 							"response": [
 								{
+									"id": "d6b64c5a-2528-4c61-8be5-ecdae92f9cc4",
 									"name": "successful operation",
 									"originalRequest": {
 										"method": "POST",
@@ -685,6 +707,7 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -697,6 +720,7 @@
 							]
 						}
 					],
+					"id": "d4393e63-3d66-49cf-864d-c7836d0770f6",
 					"auth": {
 						"type": "apikey",
 						"apikey": [
@@ -720,7 +744,8 @@
 								"packages": {},
 								"exec": [
 									""
-								]
+								],
+								"id": "fb310bfa-e913-4126-848b-f5a17a65d435"
 							}
 						},
 						{
@@ -730,13 +755,15 @@
 								"packages": {},
 								"exec": [
 									""
-								]
+								],
+								"id": "ec1443ca-d25f-4281-bb0e-e6331234de8a"
 							}
 						}
 					]
 				},
 				{
 					"name": "Update an existing pet",
+					"id": "753ed750-d33d-44ff-9322-d8394c17ac2b",
 					"request": {
 						"method": "PUT",
 						"header": [
@@ -807,6 +834,7 @@
 					},
 					"response": [
 						{
+							"id": "f7b36a1c-3a7d-4c31-afd8-ff90ca799546",
 							"name": "Successful operation",
 							"originalRequest": {
 								"method": "PUT",
@@ -875,6 +903,7 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -885,6 +914,7 @@
 							"body": "{\n  \"name\": \"doggie\",\n  \"photoUrls\": [\n    \"consectetur aliqua deserunt\",\n    \"sunt ullamco dolor\"\n  ],\n  \"id\": 10,\n  \"category\": {\n    \"id\": 1,\n    \"name\": \"Dogs\"\n  },\n  \"tags\": [\n    {\n      \"id\": -6177331,\n      \"name\": \"c\"\n    },\n    {\n      \"id\": 52579439,\n      \"name\": \"ea in enim magna\"\n    }\n  ],\n  \"status\": \"available\"\n}"
 						},
 						{
+							"id": "d07fac26-c6b7-4073-9fd4-fa4661db1493",
 							"name": "Invalid ID supplied",
 							"originalRequest": {
 								"method": "PUT",
@@ -953,6 +983,7 @@
 							"status": "Bad Request",
 							"code": 400,
 							"_postman_previewlanguage": "text",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -963,6 +994,7 @@
 							"body": ""
 						},
 						{
+							"id": "0a472ba9-2bdd-4505-8f61-56eb4b806bbe",
 							"name": "Pet not found",
 							"originalRequest": {
 								"method": "PUT",
@@ -1031,6 +1063,7 @@
 							"status": "Not Found",
 							"code": 404,
 							"_postman_previewlanguage": "text",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -1041,6 +1074,7 @@
 							"body": ""
 						},
 						{
+							"id": "96544c34-4c7a-4b7d-9909-4fef981302c3",
 							"name": "Validation exception",
 							"originalRequest": {
 								"method": "PUT",
@@ -1109,6 +1143,7 @@
 							"status": "Method Not Allowed",
 							"code": 405,
 							"_postman_previewlanguage": "text",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -1122,6 +1157,7 @@
 				},
 				{
 					"name": "Finds Pets by status",
+					"id": "ba341a45-2544-4760-b7fb-2d6d0727f990",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -1151,6 +1187,7 @@
 					},
 					"response": [
 						{
+							"id": "f40d73ab-f121-49a7-bf18-f78ec16385a2",
 							"name": "successful operation",
 							"originalRequest": {
 								"method": "GET",
@@ -1181,6 +1218,7 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -1191,6 +1229,7 @@
 							"body": "[\n  {\n    \"name\": \"doggie\",\n    \"photoUrls\": [\n      \"enim velit exercitation occaecat ea\",\n      \"quis do cupidatat qui\"\n    ],\n    \"id\": 10,\n    \"category\": {\n      \"id\": 1,\n      \"name\": \"Dogs\"\n    },\n    \"tags\": [\n      {\n        \"id\": 5690630,\n        \"name\": \"Lorem dolore culpa enim\"\n      },\n      {\n        \"id\": -78706754,\n        \"name\": \"in\"\n      }\n    ],\n    \"status\": \"pending\"\n  },\n  {\n    \"name\": \"doggie\",\n    \"photoUrls\": [\n      \"et dolor ipsum\",\n      \"sit dolor\"\n    ],\n    \"id\": 10,\n    \"category\": {\n      \"id\": 1,\n      \"name\": \"Dogs\"\n    },\n    \"tags\": [\n      {\n        \"id\": 61680438,\n        \"name\": \"voluptate non tempor\"\n      },\n      {\n        \"id\": -1517888,\n        \"name\": \"aliqua tempor\"\n      }\n    ],\n    \"status\": \"available\"\n  }\n]"
 						},
 						{
+							"id": "440ac063-bf9b-41b2-954c-3671a20aa29c",
 							"name": "Invalid status value",
 							"originalRequest": {
 								"method": "GET",
@@ -1221,6 +1260,7 @@
 							"status": "Bad Request",
 							"code": 400,
 							"_postman_previewlanguage": "text",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -1234,6 +1274,7 @@
 				},
 				{
 					"name": "Finds Pets by tags",
+					"id": "dac17d80-6f6c-4da9-9d53-e8c37ece34c2",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -1268,6 +1309,7 @@
 					},
 					"response": [
 						{
+							"id": "cf2724f5-9d0a-4b4b-a1cf-b6f29dd6b0b4",
 							"name": "successful operation",
 							"originalRequest": {
 								"method": "GET",
@@ -1302,6 +1344,7 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -1312,6 +1355,7 @@
 							"body": "[\n  {\n    \"name\": \"doggie\",\n    \"photoUrls\": [\n      \"enim velit exercitation occaecat ea\",\n      \"quis do cupidatat qui\"\n    ],\n    \"id\": 10,\n    \"category\": {\n      \"id\": 1,\n      \"name\": \"Dogs\"\n    },\n    \"tags\": [\n      {\n        \"id\": 5690630,\n        \"name\": \"Lorem dolore culpa enim\"\n      },\n      {\n        \"id\": -78706754,\n        \"name\": \"in\"\n      }\n    ],\n    \"status\": \"pending\"\n  },\n  {\n    \"name\": \"doggie\",\n    \"photoUrls\": [\n      \"et dolor ipsum\",\n      \"sit dolor\"\n    ],\n    \"id\": 10,\n    \"category\": {\n      \"id\": 1,\n      \"name\": \"Dogs\"\n    },\n    \"tags\": [\n      {\n        \"id\": 61680438,\n        \"name\": \"voluptate non tempor\"\n      },\n      {\n        \"id\": -1517888,\n        \"name\": \"aliqua tempor\"\n      }\n    ],\n    \"status\": \"available\"\n  }\n]"
 						},
 						{
+							"id": "9a2fa83b-1afc-42b7-900b-d5ae58796174",
 							"name": "Invalid tag value",
 							"originalRequest": {
 								"method": "GET",
@@ -1346,6 +1390,7 @@
 							"status": "Bad Request",
 							"code": 400,
 							"_postman_previewlanguage": "text",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -1357,7 +1402,8 @@
 						}
 					]
 				}
-			]
+			],
+			"id": "26e0dd9a-1667-4545-88b2-eda190d3a9b6"
 		},
 		{
 			"name": "store",
@@ -1370,6 +1416,7 @@
 							"item": [
 								{
 									"name": "Find purchase order by ID",
+									"id": "1d93d8a1-5bf2-48dc-8e26-4ffa52ead1aa",
 									"request": {
 										"method": "GET",
 										"header": [
@@ -1400,6 +1447,7 @@
 									},
 									"response": [
 										{
+											"id": "90248ea3-b815-4b6a-b638-048678b0fbc3",
 											"name": "successful operation",
 											"originalRequest": {
 												"method": "GET",
@@ -1426,6 +1474,7 @@
 											"status": "OK",
 											"code": 200,
 											"_postman_previewlanguage": "json",
+											"_postman_previewtype": "html",
 											"header": [
 												{
 													"key": "Content-Type",
@@ -1436,6 +1485,7 @@
 											"body": "{\n  \"id\": 10,\n  \"petId\": 198772,\n  \"quantity\": 7,\n  \"shipDate\": \"1952-02-22T17:56:19.974Z\",\n  \"status\": \"approved\",\n  \"complete\": false\n}"
 										},
 										{
+											"id": "92abb264-fc96-4160-9511-9d09d42af63c",
 											"name": "Invalid ID supplied",
 											"originalRequest": {
 												"method": "GET",
@@ -1462,6 +1512,7 @@
 											"status": "Bad Request",
 											"code": 400,
 											"_postman_previewlanguage": "text",
+											"_postman_previewtype": "html",
 											"header": [
 												{
 													"key": "Content-Type",
@@ -1472,6 +1523,7 @@
 											"body": ""
 										},
 										{
+											"id": "f69d3f99-7103-446a-a676-2b2d89bae2d7",
 											"name": "Order not found",
 											"originalRequest": {
 												"method": "GET",
@@ -1498,6 +1550,7 @@
 											"status": "Not Found",
 											"code": 404,
 											"_postman_previewlanguage": "text",
+											"_postman_previewtype": "html",
 											"header": [
 												{
 													"key": "Content-Type",
@@ -1511,6 +1564,7 @@
 								},
 								{
 									"name": "Delete purchase order by ID",
+									"id": "f557cc8d-1711-4e94-8ad6-65762cd91b16",
 									"request": {
 										"method": "DELETE",
 										"header": [],
@@ -1536,6 +1590,7 @@
 									},
 									"response": [
 										{
+											"id": "928d82ca-b962-48ce-ba26-5db7d9c83e7c",
 											"name": "Invalid ID supplied",
 											"originalRequest": {
 												"method": "DELETE",
@@ -1562,6 +1617,7 @@
 											"status": "Bad Request",
 											"code": 400,
 											"_postman_previewlanguage": "text",
+											"_postman_previewtype": "html",
 											"header": [
 												{
 													"key": "Content-Type",
@@ -1572,6 +1628,7 @@
 											"body": ""
 										},
 										{
+											"id": "2e791916-3831-4eca-b5ff-c84931f41ba9",
 											"name": "Order not found",
 											"originalRequest": {
 												"method": "DELETE",
@@ -1598,6 +1655,7 @@
 											"status": "Not Found",
 											"code": 404,
 											"_postman_previewlanguage": "text",
+											"_postman_previewtype": "html",
 											"header": [
 												{
 													"key": "Content-Type",
@@ -1609,10 +1667,12 @@
 										}
 									]
 								}
-							]
+							],
+							"id": "b8e13f0f-3f11-43e0-8cc2-c7d5db0f3682"
 						},
 						{
 							"name": "Place an order for a pet",
+							"id": "f0acc082-6b66-4bb9-abc6-04bd0ba45923",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -1669,6 +1729,7 @@
 							},
 							"response": [
 								{
+									"id": "fdc95283-c717-4cca-8459-3570a307de76",
 									"name": "successful operation",
 									"originalRequest": {
 										"method": "POST",
@@ -1717,6 +1778,7 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -1727,6 +1789,7 @@
 									"body": "{\n  \"id\": 10,\n  \"petId\": 198772,\n  \"quantity\": 7,\n  \"shipDate\": \"1952-02-22T17:56:19.974Z\",\n  \"status\": \"approved\",\n  \"complete\": false\n}"
 								},
 								{
+									"id": "98b7c60a-3654-4a06-a49e-9930db56ee7d",
 									"name": "Invalid input",
 									"originalRequest": {
 										"method": "POST",
@@ -1775,6 +1838,7 @@
 									"status": "Method Not Allowed",
 									"code": 405,
 									"_postman_previewlanguage": "text",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -1786,10 +1850,12 @@
 								}
 							]
 						}
-					]
+					],
+					"id": "5a374aa2-60bc-4691-a711-1768dbe27aa5"
 				},
 				{
 					"name": "Returns pet inventories by status",
+					"id": "e83e1f03-e2a2-4bff-9e39-a5d013117238",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -1812,6 +1878,7 @@
 					},
 					"response": [
 						{
+							"id": "5586d911-fac6-4221-b54e-42d450db8afb",
 							"name": "successful operation",
 							"originalRequest": {
 								"method": "GET",
@@ -1836,6 +1903,7 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -1847,7 +1915,8 @@
 						}
 					]
 				}
-			]
+			],
+			"id": "0461ad57-fc91-4ff4-8d3f-bdbcbcd7974e"
 		},
 		{
 			"name": "user",
@@ -1857,6 +1926,7 @@
 					"item": [
 						{
 							"name": "Get user by user name",
+							"id": "4a578de0-14b4-4a29-b559-70bfc317996d",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -1885,6 +1955,7 @@
 							},
 							"response": [
 								{
+									"id": "b64fb347-ca67-4e15-a07f-eff9e473be48",
 									"name": "successful operation",
 									"originalRequest": {
 										"method": "GET",
@@ -1910,6 +1981,7 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -1920,6 +1992,7 @@
 									"body": "{\n  \"id\": 10,\n  \"username\": \"theUser\",\n  \"firstName\": \"John\",\n  \"lastName\": \"James\",\n  \"email\": \"john@email.com\",\n  \"password\": \"12345\",\n  \"phone\": \"12345\",\n  \"userStatus\": 1\n}"
 								},
 								{
+									"id": "1e90f7a8-bc3f-4df7-98c4-ad5959eca662",
 									"name": "Invalid username supplied",
 									"originalRequest": {
 										"method": "GET",
@@ -1945,6 +2018,7 @@
 									"status": "Bad Request",
 									"code": 400,
 									"_postman_previewlanguage": "text",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -1955,6 +2029,7 @@
 									"body": ""
 								},
 								{
+									"id": "ef41fd17-6538-4940-8d4b-d6f37ff4a25b",
 									"name": "User not found",
 									"originalRequest": {
 										"method": "GET",
@@ -1980,6 +2055,7 @@
 									"status": "Not Found",
 									"code": 404,
 									"_postman_previewlanguage": "text",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -1993,6 +2069,7 @@
 						},
 						{
 							"name": "Update user",
+							"id": "4fca26bc-15b1-48a6-989e-bea02d08fcbb",
 							"request": {
 								"method": "PUT",
 								"header": [
@@ -2060,6 +2137,7 @@
 							},
 							"response": [
 								{
+									"id": "07341e56-9d04-4883-8c73-a7a82dfd6a23",
 									"name": "successful operation",
 									"originalRequest": {
 										"method": "PUT",
@@ -2123,6 +2201,7 @@
 									"status": "Internal Server Error",
 									"code": 500,
 									"_postman_previewlanguage": "text",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -2136,6 +2215,7 @@
 						},
 						{
 							"name": "Delete user",
+							"id": "8ff85a56-3914-450c-a92a-482e1229edd8",
 							"request": {
 								"method": "DELETE",
 								"header": [],
@@ -2160,6 +2240,7 @@
 							},
 							"response": [
 								{
+									"id": "cacfe988-fd3a-436b-a5e5-e20ae98fc3ac",
 									"name": "Invalid username supplied",
 									"originalRequest": {
 										"method": "DELETE",
@@ -2185,6 +2266,7 @@
 									"status": "Bad Request",
 									"code": 400,
 									"_postman_previewlanguage": "text",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -2195,6 +2277,7 @@
 									"body": ""
 								},
 								{
+									"id": "71f9b2af-f390-4d56-baf1-2fe98376e919",
 									"name": "User not found",
 									"originalRequest": {
 										"method": "DELETE",
@@ -2220,6 +2303,7 @@
 									"status": "Not Found",
 									"code": 404,
 									"_postman_previewlanguage": "text",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -2231,10 +2315,12 @@
 								}
 							]
 						}
-					]
+					],
+					"id": "a9e167fc-1b46-4b3a-a828-9b981fc3c806"
 				},
 				{
 					"name": "Create user",
+					"id": "e184e74d-5573-435c-b220-20d26bdef0c6",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -2298,6 +2384,7 @@
 					},
 					"response": [
 						{
+							"id": "d661fcc4-41ad-4a35-97a3-47bee21c979c",
 							"name": "successful operation",
 							"originalRequest": {
 								"method": "POST",
@@ -2353,6 +2440,7 @@
 							"status": "Internal Server Error",
 							"code": 500,
 							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -2366,6 +2454,7 @@
 				},
 				{
 					"name": "Creates list of users with given input array",
+					"id": "e470f0fd-6e16-492b-bdaa-b758b1aee9de",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -2401,6 +2490,7 @@
 					},
 					"response": [
 						{
+							"id": "0d2a70f4-63a6-4208-ada6-e0409c1a2f20",
 							"name": "Successful operation",
 							"originalRequest": {
 								"method": "POST",
@@ -2428,6 +2518,7 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -2438,6 +2529,7 @@
 							"body": "{\n  \"id\": 10,\n  \"username\": \"theUser\",\n  \"firstName\": \"John\",\n  \"lastName\": \"James\",\n  \"email\": \"john@email.com\",\n  \"password\": \"12345\",\n  \"phone\": \"12345\",\n  \"userStatus\": 1\n}"
 						},
 						{
+							"id": "3a771bf4-0e92-4837-83c6-8ed914a01606",
 							"name": "successful operation",
 							"originalRequest": {
 								"method": "POST",
@@ -2465,6 +2557,7 @@
 							"status": "Internal Server Error",
 							"code": 500,
 							"_postman_previewlanguage": "text",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -2478,6 +2571,7 @@
 				},
 				{
 					"name": "Logs user into the system",
+					"id": "5ee173ec-3f05-4e1e-beec-98a38e5ea0a8",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -2511,6 +2605,7 @@
 					},
 					"response": [
 						{
+							"id": "982d96a0-1d66-4017-95dc-f44cccc20714",
 							"name": "successful operation",
 							"originalRequest": {
 								"method": "GET",
@@ -2539,6 +2634,7 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "X-Rate-Limit",
@@ -2559,6 +2655,7 @@
 							"body": "\"labore fugiat\""
 						},
 						{
+							"id": "cf9a77c1-5dbd-47dc-8539-56baf68ce7ae",
 							"name": "Invalid username/password supplied",
 							"originalRequest": {
 								"method": "GET",
@@ -2587,6 +2684,7 @@
 							"status": "Bad Request",
 							"code": 400,
 							"_postman_previewlanguage": "text",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -2600,6 +2698,7 @@
 				},
 				{
 					"name": "Logs out current logged in user session",
+					"id": "b139fd7e-c09f-4b28-a891-524c5f872fc2",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -2616,6 +2715,7 @@
 					},
 					"response": [
 						{
+							"id": "2f2855cb-ca82-482e-83c6-1239743b2c9e",
 							"name": "successful operation",
 							"originalRequest": {
 								"method": "GET",
@@ -2634,6 +2734,7 @@
 							"status": "Internal Server Error",
 							"code": 500,
 							"_postman_previewlanguage": "text",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -2645,11 +2746,13 @@
 						}
 					]
 				}
-			]
+			],
+			"id": "6a9734d8-8454-4c21-badd-e5188903296c"
 		}
 	],
 	"variable": [
 		{
+			"id": "59431b5b-4c97-45c0-ae81-f1f51ecb7254",
 			"key": "baseUrl",
 			"value": "https://petstore3.swagger.io/api/v3",
 			"type": "string"

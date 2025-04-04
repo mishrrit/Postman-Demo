@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "d5183136-eb65-426e-9166-3c9980315ad2",
+		"_postman_id": "c5f98ecf-fcf9-4899-8c66-d1de79052137",
 		"name": "Demp_App",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "4969429"
+		"_uid": "4969429-c5f98ecf-fcf9-4899-8c66-d1de79052137"
 	},
 	"item": [
 		{
@@ -56,10 +56,12 @@
 							"    pm.expect(responseData.support).to.have.property('text');",
 							"});"
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"id": "29246599-66d9-4a68-b513-4af4ae0cb2b9"
 					}
 				}
 			],
+			"id": "f7715fb3-bfe3-41f7-8458-d67d28de4636",
 			"request": {
 				"method": "GET",
 				"header": [],

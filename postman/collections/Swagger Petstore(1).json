@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "5f0443ef-4349-487c-8cd2-0cab4386c3ff",
+		"_postman_id": "dd2f8ef6-9e4b-42c7-a084-4d1847cad810",
 		"name": "Swagger Petstore",
 		"description": "This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.\n\nContact Support:\n Email: apiteam@swagger.io",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "4969429-5f0443ef-4349-487c-8cd2-0cab4386c3ff"
+		"_uid": "4969429-dd2f8ef6-9e4b-42c7-a084-4d1847cad810"
 	},
 	"item": [
 		{
@@ -18,31 +18,11 @@
 							"item": [
 								{
 									"name": "uploads an image",
-									"id": "147ea51a-6ac5-48ad-9954-6afb2a00cd10",
+									"id": "d4e8c099-41fd-429c-95ba-e2ae832a0483",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
 									"request": {
-										"auth": {
-											"type": "oauth2",
-											"oauth2": [
-												{
-													"key": "scope",
-													"value": "read:pets write:pets",
-													"type": "string"
-												},
-												{
-													"key": "authUrl",
-													"value": "https://petstore.swagger.io/oauth/authorize",
-													"type": "string"
-												},
-												{
-													"key": "grant_type",
-													"value": "implicit",
-													"type": "string"
-												}
-											]
-										},
 										"method": "POST",
 										"header": [
 											{
@@ -67,7 +47,7 @@
 													"description": "file to upload",
 													"key": "file",
 													"type": "file",
-													"src": []
+													"value": null
 												}
 											]
 										},
@@ -92,7 +72,7 @@
 									},
 									"response": [
 										{
-											"id": "7e94bfa2-f862-4632-9d14-174f9259cf09",
+											"id": "1e4ecf7a-4e85-4de6-bff4-20b1d3b675a5",
 											"name": "successful operation",
 											"originalRequest": {
 												"method": "POST",
@@ -104,11 +84,6 @@
 													{
 														"key": "Accept",
 														"value": "application/json"
-													},
-													{
-														"description": "Added as a part of security scheme: oauth2",
-														"key": "Authorization",
-														"value": "<token>"
 													}
 												],
 												"body": {
@@ -148,12 +123,11 @@
 											"status": "OK",
 											"code": 200,
 											"_postman_previewlanguage": "json",
-											"_postman_previewtype": "html",
 											"header": [
 												{
 													"key": "Content-Type",
 													"value": "application/json",
-													"uuid": "eaecb28b-7ed0-491a-b031-a7b363e2a0be"
+													"uuid": "9490cf22-e62e-4dd6-8291-cc13ae0ccdec"
 												}
 											],
 											"cookie": [],
@@ -162,35 +136,15 @@
 									]
 								}
 							],
-							"id": "25e7e32d-f2ef-4878-80bd-a707487a4a3e"
+							"id": "06d14426-e03d-4d9e-8338-8f7e8dfa9585"
 						},
 						{
 							"name": "Find pet by ID",
-							"id": "7a99b688-6a5f-4105-bd4f-7193a5568e92",
+							"id": "9ed391e4-d541-464f-bf3c-8e5961e436ef",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
-								"auth": {
-									"type": "apikey",
-									"apikey": [
-										{
-											"key": "key",
-											"value": "api_key",
-											"type": "string"
-										},
-										{
-											"key": "value",
-											"value": "{{apiKey}}",
-											"type": "string"
-										},
-										{
-											"key": "in",
-											"value": "header",
-											"type": "string"
-										}
-									]
-								},
 								"method": "GET",
 								"header": [
 									{
@@ -219,7 +173,7 @@
 							},
 							"response": [
 								{
-									"id": "95b036b6-428c-4150-8c04-8feaf05f3504",
+									"id": "2b53c8ef-e048-4c2e-8d82-c53fca5b158c",
 									"name": "successful operation",
 									"originalRequest": {
 										"method": "GET",
@@ -227,11 +181,6 @@
 											{
 												"key": "Accept",
 												"value": "application/json"
-											},
-											{
-												"description": "Added as a part of security scheme: apikey",
-												"key": "api_key",
-												"value": "<API Key>"
 											}
 										],
 										"url": {
@@ -253,29 +202,22 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
 											"value": "application/json",
-											"uuid": "a3fc3e9f-bcaf-42cc-8244-ca0b7b2ad10d"
+											"uuid": "27903e62-a628-416e-a6ab-0e5cd8231f3c"
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"name\": \"<string>\",\n  \"photoUrls\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<long>\",\n  \"category\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\"\n  },\n  \"tags\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    }\n  ],\n  \"status\": \"available\"\n}"
+									"body": "{\n  \"name\": \"<string>\",\n  \"photoUrls\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<long>\",\n  \"category\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\"\n  },\n  \"tags\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    }\n  ],\n  \"status\": \"pending\"\n}"
 								},
 								{
-									"id": "fbafa6c8-baad-46b2-bed4-ac15b9a3e1b4",
+									"id": "63d82d93-4c48-4a94-8038-012f08f3d6d5",
 									"name": "Invalid ID supplied",
 									"originalRequest": {
 										"method": "GET",
-										"header": [
-											{
-												"description": "Added as a part of security scheme: apikey",
-												"key": "api_key",
-												"value": "<API Key>"
-											}
-										],
+										"header": [],
 										"url": {
 											"raw": "{{baseUrl}}/pet/:petId",
 											"host": [
@@ -295,23 +237,16 @@
 									"status": "Bad Request",
 									"code": 400,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": [],
 									"body": null
 								},
 								{
-									"id": "e019564d-bbea-466a-8c62-711802c93c48",
+									"id": "64396d21-e17a-43ae-ba7d-a73552e56782",
 									"name": "Pet not found",
 									"originalRequest": {
 										"method": "GET",
-										"header": [
-											{
-												"description": "Added as a part of security scheme: apikey",
-												"key": "api_key",
-												"value": "<API Key>"
-											}
-										],
+										"header": [],
 										"url": {
 											"raw": "{{baseUrl}}/pet/:petId",
 											"host": [
@@ -331,7 +266,6 @@
 									"status": "Not Found",
 									"code": 404,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": [],
 									"body": null
@@ -340,31 +274,11 @@
 						},
 						{
 							"name": "Updates a pet in the store with form data",
-							"id": "80481bc9-be59-453c-aadd-c0d481bdc1f4",
+							"id": "8fbc8677-eb02-4899-a20a-e5a63249587a",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
-								"auth": {
-									"type": "oauth2",
-									"oauth2": [
-										{
-											"key": "scope",
-											"value": "read:pets write:pets",
-											"type": "string"
-										},
-										{
-											"key": "authUrl",
-											"value": "https://petstore.swagger.io/oauth/authorize",
-											"type": "string"
-										},
-										{
-											"key": "grant_type",
-											"value": "implicit",
-											"type": "string"
-										}
-									]
-								},
 								"method": "POST",
 								"header": [
 									{
@@ -407,7 +321,7 @@
 							},
 							"response": [
 								{
-									"id": "172a3971-7222-4a77-a007-1e05a83c964c",
+									"id": "164059e2-f217-4034-90d1-54327a10adb2",
 									"name": "Invalid input",
 									"originalRequest": {
 										"method": "POST",
@@ -415,11 +329,6 @@
 											{
 												"key": "Content-Type",
 												"value": "application/x-www-form-urlencoded"
-											},
-											{
-												"description": "Added as a part of security scheme: oauth2",
-												"key": "Authorization",
-												"value": "<token>"
 											}
 										],
 										"body": {
@@ -456,7 +365,6 @@
 									"status": "Method Not Allowed",
 									"code": 405,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": [],
 									"body": null
@@ -465,31 +373,11 @@
 						},
 						{
 							"name": "Deletes a pet",
-							"id": "9f7875b0-142f-4fd2-ab8d-54a86e9effab",
+							"id": "cfa9923f-9612-4ddd-a450-39b151045a17",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
-								"auth": {
-									"type": "oauth2",
-									"oauth2": [
-										{
-											"key": "scope",
-											"value": "read:pets write:pets",
-											"type": "string"
-										},
-										{
-											"key": "authUrl",
-											"value": "https://petstore.swagger.io/oauth/authorize",
-											"type": "string"
-										},
-										{
-											"key": "grant_type",
-											"value": "implicit",
-											"type": "string"
-										}
-									]
-								},
 								"method": "DELETE",
 								"header": [
 									{
@@ -517,7 +405,7 @@
 							},
 							"response": [
 								{
-									"id": "b412966e-5fdc-48b8-aab6-339b8b510e00",
+									"id": "1465bde1-348d-4820-84c9-3f0e864eeb28",
 									"name": "Invalid ID supplied",
 									"originalRequest": {
 										"method": "DELETE",
@@ -525,11 +413,6 @@
 											{
 												"key": "api_key",
 												"value": "<string>"
-											},
-											{
-												"description": "Added as a part of security scheme: oauth2",
-												"key": "Authorization",
-												"value": "<token>"
 											}
 										],
 										"url": {
@@ -551,13 +434,12 @@
 									"status": "Bad Request",
 									"code": 400,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": [],
 									"body": null
 								},
 								{
-									"id": "7afb233d-280d-477b-bb46-8de5763f75f3",
+									"id": "f13cfc7f-fefa-4783-9c97-593c7123d070",
 									"name": "Pet not found",
 									"originalRequest": {
 										"method": "DELETE",
@@ -565,11 +447,6 @@
 											{
 												"key": "api_key",
 												"value": "<string>"
-											},
-											{
-												"description": "Added as a part of security scheme: oauth2",
-												"key": "Authorization",
-												"value": "<token>"
 											}
 										],
 										"url": {
@@ -591,7 +468,6 @@
 									"status": "Not Found",
 									"code": 404,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": [],
 									"body": null
@@ -599,38 +475,18 @@
 							]
 						}
 					],
-					"id": "90f80bab-cefd-4a18-9391-9a65e41895c1"
+					"id": "8dead2d6-99f2-434d-ad3b-cc270115f098"
 				},
 				{
 					"name": "findByStatus",
 					"item": [
 						{
 							"name": "Finds Pets by status",
-							"id": "3eb2c042-786a-4c4d-afd8-e6622375e1f4",
+							"id": "5a4f9078-1e74-4a1e-9335-2da298a73654",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
-								"auth": {
-									"type": "oauth2",
-									"oauth2": [
-										{
-											"key": "scope",
-											"value": "read:pets write:pets",
-											"type": "string"
-										},
-										{
-											"key": "authUrl",
-											"value": "https://petstore.swagger.io/oauth/authorize",
-											"type": "string"
-										},
-										{
-											"key": "grant_type",
-											"value": "implicit",
-											"type": "string"
-										}
-									]
-								},
 								"method": "GET",
 								"header": [
 									{
@@ -664,7 +520,7 @@
 							},
 							"response": [
 								{
-									"id": "13582fa4-131c-4a9c-821d-056fa78ea8d9",
+									"id": "520c992f-5c46-4616-b3eb-fb1242136a40",
 									"name": "successful operation",
 									"originalRequest": {
 										"method": "GET",
@@ -672,11 +528,6 @@
 											{
 												"key": "Accept",
 												"value": "application/json"
-											},
-											{
-												"description": "Added as a part of security scheme: oauth2",
-												"key": "Authorization",
-												"value": "<token>"
 											}
 										],
 										"url": {
@@ -700,29 +551,22 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
 											"value": "application/json",
-											"uuid": "3c7a2649-8fbe-4dd8-abe6-4ea25af505cc"
+											"uuid": "2197bb71-2166-4507-a2ef-a377ea1a55a2"
 										}
 									],
 									"cookie": [],
 									"body": "[\n  {\n    \"name\": \"<string>\",\n    \"photoUrls\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"id\": \"<long>\",\n    \"category\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    \"tags\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      }\n    ],\n    \"status\": \"available\"\n  },\n  {\n    \"name\": \"<string>\",\n    \"photoUrls\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"id\": \"<long>\",\n    \"category\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    \"tags\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      }\n    ],\n    \"status\": \"pending\"\n  }\n]"
 								},
 								{
-									"id": "190f41c5-3014-4f62-a3fe-58acb36c24ce",
+									"id": "a2fc81d5-61bb-4c37-beac-cbd8a1e20efa",
 									"name": "Invalid status value",
 									"originalRequest": {
 										"method": "GET",
-										"header": [
-											{
-												"description": "Added as a part of security scheme: oauth2",
-												"key": "Authorization",
-												"value": "<token>"
-											}
-										],
+										"header": [],
 										"url": {
 											"raw": "{{baseUrl}}/pet/findByStatus?status=available",
 											"host": [
@@ -744,7 +588,6 @@
 									"status": "Bad Request",
 									"code": 400,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": [],
 									"body": null
@@ -752,38 +595,18 @@
 							]
 						}
 					],
-					"id": "d201484e-80a0-46c9-adeb-12da25ea49de"
+					"id": "57260f55-58a0-4eb9-9fa7-fa77f3f898e6"
 				},
 				{
 					"name": "findByTags",
 					"item": [
 						{
 							"name": "Finds Pets by tags",
-							"id": "0f828ead-6fb4-4d46-ab55-f1c9e13d2dc6",
+							"id": "fb01ef8e-918a-4594-a43d-a9e4ea00fde6",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
-								"auth": {
-									"type": "oauth2",
-									"oauth2": [
-										{
-											"key": "scope",
-											"value": "read:pets write:pets",
-											"type": "string"
-										},
-										{
-											"key": "authUrl",
-											"value": "https://petstore.swagger.io/oauth/authorize",
-											"type": "string"
-										},
-										{
-											"key": "grant_type",
-											"value": "implicit",
-											"type": "string"
-										}
-									]
-								},
 								"method": "GET",
 								"header": [
 									{
@@ -817,7 +640,7 @@
 							},
 							"response": [
 								{
-									"id": "81d0d6ab-b3ca-4b53-a632-d4598e273143",
+									"id": "abef9eef-b67c-4764-89cd-01a39d7b62ef",
 									"name": "successful operation",
 									"originalRequest": {
 										"method": "GET",
@@ -825,11 +648,6 @@
 											{
 												"key": "Accept",
 												"value": "application/json"
-											},
-											{
-												"description": "Added as a part of security scheme: oauth2",
-												"key": "Authorization",
-												"value": "<token>"
 											}
 										],
 										"url": {
@@ -853,29 +671,22 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
 											"value": "application/json",
-											"uuid": "c95340a8-dab6-45fc-8e43-8f046c25caa9"
+											"uuid": "764b1113-508c-4e2f-937a-d412a5961523"
 										}
 									],
 									"cookie": [],
 									"body": "[\n  {\n    \"name\": \"<string>\",\n    \"photoUrls\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"id\": \"<long>\",\n    \"category\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    \"tags\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      }\n    ],\n    \"status\": \"available\"\n  },\n  {\n    \"name\": \"<string>\",\n    \"photoUrls\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"id\": \"<long>\",\n    \"category\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    \"tags\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      }\n    ],\n    \"status\": \"pending\"\n  }\n]"
 								},
 								{
-									"id": "c802a99c-3cf2-4400-bc25-11e6995f0169",
+									"id": "e64061b0-47a1-4756-a779-a438de0175e0",
 									"name": "Invalid tag value",
 									"originalRequest": {
 										"method": "GET",
-										"header": [
-											{
-												"description": "Added as a part of security scheme: oauth2",
-												"key": "Authorization",
-												"value": "<token>"
-											}
-										],
+										"header": [],
 										"url": {
 											"raw": "{{baseUrl}}/pet/findByTags?tags=<string>",
 											"host": [
@@ -897,7 +708,6 @@
 									"status": "Bad Request",
 									"code": 400,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": [],
 									"body": null
@@ -905,35 +715,15 @@
 							]
 						}
 					],
-					"id": "7a734a23-7fa7-4f34-a0cd-e8d0f8854455"
+					"id": "84ad5635-b458-4af6-932b-c7316a98c686"
 				},
 				{
 					"name": "Add a new pet to the store",
-					"id": "ea77a753-ea9d-49bf-a89a-26efd64d95ef",
+					"id": "2b0ebfc4-9dfd-439c-9996-357f83fee49d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "oauth2",
-							"oauth2": [
-								{
-									"key": "scope",
-									"value": "read:pets write:pets",
-									"type": "string"
-								},
-								{
-									"key": "authUrl",
-									"value": "https://petstore.swagger.io/oauth/authorize",
-									"type": "string"
-								},
-								{
-									"key": "grant_type",
-									"value": "implicit",
-									"type": "string"
-								}
-							]
-						},
 						"method": "POST",
 						"header": [
 							{
@@ -943,7 +733,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"name\": \"<string>\",\n  \"photoUrls\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<long>\",\n  \"category\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\"\n  },\n  \"tags\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+							"raw": "{\n  \"name\": \"<string>\",\n  \"photoUrls\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<long>\",\n  \"category\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\"\n  },\n  \"tags\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    }\n  ],\n  \"status\": \"pending\"\n}",
 							"options": {
 								"raw": {
 									"headerFamily": "json",
@@ -963,7 +753,7 @@
 					},
 					"response": [
 						{
-							"id": "b8ba64ef-70eb-40bc-b966-abb2e44e3692",
+							"id": "f06392e8-8b5d-400c-a8ec-d05f7b95e787",
 							"name": "Invalid input",
 							"originalRequest": {
 								"method": "POST",
@@ -971,16 +761,11 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"description": "Added as a part of security scheme: oauth2",
-										"key": "Authorization",
-										"value": "<token>"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"name\": \"<string>\",\n  \"photoUrls\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<long>\",\n  \"category\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\"\n  },\n  \"tags\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"photoUrls\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<long>\",\n  \"category\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\"\n  },\n  \"tags\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    }\n  ],\n  \"status\": \"pending\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1001,7 +786,6 @@
 							"status": "Method Not Allowed",
 							"code": 405,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": [],
 							"body": null
@@ -1010,31 +794,11 @@
 				},
 				{
 					"name": "Update an existing pet",
-					"id": "a11ac0d4-6e2f-4740-8c3c-647d1d284373",
+					"id": "067b046c-47b8-4f8a-a17a-9c246418c017",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "oauth2",
-							"oauth2": [
-								{
-									"key": "scope",
-									"value": "read:pets write:pets",
-									"type": "string"
-								},
-								{
-									"key": "authUrl",
-									"value": "https://petstore.swagger.io/oauth/authorize",
-									"type": "string"
-								},
-								{
-									"key": "grant_type",
-									"value": "implicit",
-									"type": "string"
-								}
-							]
-						},
 						"method": "PUT",
 						"header": [
 							{
@@ -1044,7 +808,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"name\": \"<string>\",\n  \"photoUrls\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<long>\",\n  \"category\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\"\n  },\n  \"tags\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+							"raw": "{\n  \"name\": \"<string>\",\n  \"photoUrls\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<long>\",\n  \"category\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\"\n  },\n  \"tags\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    }\n  ],\n  \"status\": \"pending\"\n}",
 							"options": {
 								"raw": {
 									"headerFamily": "json",
@@ -1064,7 +828,7 @@
 					},
 					"response": [
 						{
-							"id": "5aa30da1-a769-481a-b0f7-a89c84ab0248",
+							"id": "3d286c3b-4289-41fa-a1e6-3ae5cc4d5a9e",
 							"name": "Invalid ID supplied",
 							"originalRequest": {
 								"method": "PUT",
@@ -1072,16 +836,11 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"description": "Added as a part of security scheme: oauth2",
-										"key": "Authorization",
-										"value": "<token>"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"name\": \"<string>\",\n  \"photoUrls\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<long>\",\n  \"category\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\"\n  },\n  \"tags\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"photoUrls\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<long>\",\n  \"category\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\"\n  },\n  \"tags\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    }\n  ],\n  \"status\": \"pending\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1102,13 +861,12 @@
 							"status": "Bad Request",
 							"code": 400,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": [],
 							"body": null
 						},
 						{
-							"id": "9f2a86df-ced1-477e-a206-a21a3dd74dac",
+							"id": "4c5ed815-72e6-4787-a9ce-93ae4a213793",
 							"name": "Pet not found",
 							"originalRequest": {
 								"method": "PUT",
@@ -1116,16 +874,11 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"description": "Added as a part of security scheme: oauth2",
-										"key": "Authorization",
-										"value": "<token>"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"name\": \"<string>\",\n  \"photoUrls\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<long>\",\n  \"category\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\"\n  },\n  \"tags\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"photoUrls\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<long>\",\n  \"category\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\"\n  },\n  \"tags\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    }\n  ],\n  \"status\": \"pending\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1146,13 +899,12 @@
 							"status": "Not Found",
 							"code": 404,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": [],
 							"body": null
 						},
 						{
-							"id": "3e3fbaf4-6986-46c3-81f4-6ae354bf464e",
+							"id": "84eeb1c0-d171-46b9-ad84-f0d511435dda",
 							"name": "Validation exception",
 							"originalRequest": {
 								"method": "PUT",
@@ -1160,16 +912,11 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"description": "Added as a part of security scheme: oauth2",
-										"key": "Authorization",
-										"value": "<token>"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"name\": \"<string>\",\n  \"photoUrls\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<long>\",\n  \"category\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\"\n  },\n  \"tags\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"photoUrls\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<long>\",\n  \"category\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\"\n  },\n  \"tags\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    }\n  ],\n  \"status\": \"pending\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1190,7 +937,6 @@
 							"status": "Method Not Allowed",
 							"code": 405,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": [],
 							"body": null
@@ -1198,7 +944,7 @@
 					]
 				}
 			],
-			"id": "ed4ff140-2f0c-47e3-a98c-6d741b71550a"
+			"id": "3d4ad9de-7847-430e-b983-49eb42c99ea2"
 		},
 		{
 			"name": "store",
@@ -1208,31 +954,11 @@
 					"item": [
 						{
 							"name": "Returns pet inventories by status",
-							"id": "74046f1c-f262-4386-8b54-7ee128482cfb",
+							"id": "7f7f0e08-f06b-4253-ae97-eafd952f6de3",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
-								"auth": {
-									"type": "apikey",
-									"apikey": [
-										{
-											"key": "key",
-											"value": "api_key",
-											"type": "string"
-										},
-										{
-											"key": "value",
-											"value": "{{apiKey}}",
-											"type": "string"
-										},
-										{
-											"key": "in",
-											"value": "header",
-											"type": "string"
-										}
-									]
-								},
 								"method": "GET",
 								"header": [
 									{
@@ -1254,7 +980,7 @@
 							},
 							"response": [
 								{
-									"id": "a0c643e0-38de-41c7-8ce9-14395d299f5f",
+									"id": "f6f99edc-c7ae-49b5-bbdf-8d536558d219",
 									"name": "successful operation",
 									"originalRequest": {
 										"method": "GET",
@@ -1262,11 +988,6 @@
 											{
 												"key": "Accept",
 												"value": "application/json"
-											},
-											{
-												"description": "Added as a part of security scheme: apikey",
-												"key": "api_key",
-												"value": "<API Key>"
 											}
 										],
 										"url": {
@@ -1283,21 +1004,20 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
 											"value": "application/json",
-											"uuid": "6e5ab20d-10fe-4b11-a75e-4aae679bdc7c"
+											"uuid": "5dfc1ca6-e24b-44bc-958d-44115312e3aa"
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"Lorem_16c\": \"<integer>\",\n  \"consequat_79\": \"<integer>\"\n}"
+									"body": "{\n  \"ipsum_3\": \"<integer>\",\n  \"fugiat0\": \"<integer>\"\n}"
 								}
 							]
 						}
 					],
-					"id": "97af17cf-41da-48d8-8136-351a791a2061"
+					"id": "49fe71b6-a001-4921-9e51-0fe5dbf56293"
 				},
 				{
 					"name": "order",
@@ -1307,7 +1027,7 @@
 							"item": [
 								{
 									"name": "Find purchase order by ID",
-									"id": "dd9a6d30-c6c5-4a95-8eaf-daf7b526c38a",
+									"id": "10ba9a09-79c7-49bc-8a98-f693532fcd51",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -1341,7 +1061,7 @@
 									},
 									"response": [
 										{
-											"id": "d4163a99-45eb-4874-bf5e-f76b3c14ccbe",
+											"id": "6da89d62-a737-471e-990c-0f9ce0138999",
 											"name": "successful operation",
 											"originalRequest": {
 												"method": "GET",
@@ -1371,19 +1091,18 @@
 											"status": "OK",
 											"code": 200,
 											"_postman_previewlanguage": "json",
-											"_postman_previewtype": "html",
 											"header": [
 												{
 													"key": "Content-Type",
 													"value": "application/json",
-													"uuid": "0cfeb569-d451-4fb4-abdc-f661c0cb21e8"
+													"uuid": "e1d81f32-c7f1-4c81-a742-3479a6fd9034"
 												}
 											],
 											"cookie": [],
-											"body": "{\n  \"id\": \"<long>\",\n  \"petId\": \"<long>\",\n  \"quantity\": \"<integer>\",\n  \"shipDate\": \"<dateTime>\",\n  \"status\": \"approved\",\n  \"complete\": \"<boolean>\"\n}"
+											"body": "{\n  \"id\": \"<long>\",\n  \"petId\": \"<long>\",\n  \"quantity\": \"<integer>\",\n  \"shipDate\": \"<dateTime>\",\n  \"status\": \"placed\",\n  \"complete\": \"<boolean>\"\n}"
 										},
 										{
-											"id": "cb145864-29a2-43dd-8bf9-a9a597a530da",
+											"id": "a1d118bc-2f30-4544-a3cf-b67319c150a9",
 											"name": "Invalid ID supplied",
 											"originalRequest": {
 												"method": "GET",
@@ -1408,13 +1127,12 @@
 											"status": "Bad Request",
 											"code": 400,
 											"_postman_previewlanguage": "text",
-											"_postman_previewtype": "html",
 											"header": [],
 											"cookie": [],
 											"body": null
 										},
 										{
-											"id": "278b77c0-098a-4d70-b79b-46bf6fa45626",
+											"id": "b8c33d19-700b-4990-8068-6b8c98a30ab7",
 											"name": "Order not found",
 											"originalRequest": {
 												"method": "GET",
@@ -1439,7 +1157,6 @@
 											"status": "Not Found",
 											"code": 404,
 											"_postman_previewlanguage": "text",
-											"_postman_previewtype": "html",
 											"header": [],
 											"cookie": [],
 											"body": null
@@ -1448,7 +1165,7 @@
 								},
 								{
 									"name": "Delete purchase order by ID",
-									"id": "1f8f189f-754d-4bea-a8f0-01d4f7ff5202",
+									"id": "a3e97f33-9b6d-447b-98b3-eb5c2476fcb4",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -1477,7 +1194,7 @@
 									},
 									"response": [
 										{
-											"id": "d55beea3-c562-44db-bd9b-287e0f399ef1",
+											"id": "012e32d4-8860-4d31-98dd-36c926105eed",
 											"name": "Invalid ID supplied",
 											"originalRequest": {
 												"method": "DELETE",
@@ -1502,13 +1219,12 @@
 											"status": "Bad Request",
 											"code": 400,
 											"_postman_previewlanguage": "text",
-											"_postman_previewtype": "html",
 											"header": [],
 											"cookie": [],
 											"body": null
 										},
 										{
-											"id": "58a5eb00-0abb-42c5-bd99-83f034960bbb",
+											"id": "47e22696-1863-4c6c-a7d7-45d35309bad4",
 											"name": "Order not found",
 											"originalRequest": {
 												"method": "DELETE",
@@ -1533,7 +1249,6 @@
 											"status": "Not Found",
 											"code": 404,
 											"_postman_previewlanguage": "text",
-											"_postman_previewtype": "html",
 											"header": [],
 											"cookie": [],
 											"body": null
@@ -1541,11 +1256,11 @@
 									]
 								}
 							],
-							"id": "7de4eef1-0e5a-4e32-80b4-33348e884583"
+							"id": "173048d0-b3c9-4eee-b812-141118a84ba5"
 						},
 						{
 							"name": "Place an order for a pet",
-							"id": "d465f581-ae85-48bd-9e1f-4020e6e4d424",
+							"id": "9b1f5fd3-f695-4653-9664-fde4d3157353",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1563,7 +1278,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"id\": \"<long>\",\n  \"petId\": \"<long>\",\n  \"quantity\": \"<integer>\",\n  \"shipDate\": \"<dateTime>\",\n  \"status\": \"approved\",\n  \"complete\": \"<boolean>\"\n}",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"petId\": \"<long>\",\n  \"quantity\": \"<integer>\",\n  \"shipDate\": \"<dateTime>\",\n  \"status\": \"placed\",\n  \"complete\": \"<boolean>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1584,7 +1299,7 @@
 							},
 							"response": [
 								{
-									"id": "c9ec883f-2574-4342-b4f6-13ee46f286b3",
+									"id": "069f2ea9-7b3f-42f6-b350-4e40e3d67015",
 									"name": "successful operation",
 									"originalRequest": {
 										"method": "POST",
@@ -1600,7 +1315,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"id\": \"<long>\",\n  \"petId\": \"<long>\",\n  \"quantity\": \"<integer>\",\n  \"shipDate\": \"<dateTime>\",\n  \"status\": \"approved\",\n  \"complete\": \"<boolean>\"\n}",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"petId\": \"<long>\",\n  \"quantity\": \"<integer>\",\n  \"shipDate\": \"<dateTime>\",\n  \"status\": \"placed\",\n  \"complete\": \"<boolean>\"\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -1622,19 +1337,18 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
 											"value": "application/json",
-											"uuid": "670ed055-97ba-4e67-9424-ac55dc03ad44"
+											"uuid": "03a63897-ec11-4307-8c44-bed730e52185"
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"id\": \"<long>\",\n  \"petId\": \"<long>\",\n  \"quantity\": \"<integer>\",\n  \"shipDate\": \"<dateTime>\",\n  \"status\": \"approved\",\n  \"complete\": \"<boolean>\"\n}"
+									"body": "{\n  \"id\": \"<long>\",\n  \"petId\": \"<long>\",\n  \"quantity\": \"<integer>\",\n  \"shipDate\": \"<dateTime>\",\n  \"status\": \"placed\",\n  \"complete\": \"<boolean>\"\n}"
 								},
 								{
-									"id": "b99e1ff0-6f4e-468b-8f34-afea0d5a7c66",
+									"id": "ab9502e4-4c34-4428-b4d7-ab43a842fd8b",
 									"name": "Invalid Order",
 									"originalRequest": {
 										"method": "POST",
@@ -1646,7 +1360,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"id\": \"<long>\",\n  \"petId\": \"<long>\",\n  \"quantity\": \"<integer>\",\n  \"shipDate\": \"<dateTime>\",\n  \"status\": \"approved\",\n  \"complete\": \"<boolean>\"\n}",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"petId\": \"<long>\",\n  \"quantity\": \"<integer>\",\n  \"shipDate\": \"<dateTime>\",\n  \"status\": \"placed\",\n  \"complete\": \"<boolean>\"\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -1668,7 +1382,6 @@
 									"status": "Bad Request",
 									"code": 400,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": [],
 									"body": null
@@ -1676,10 +1389,10 @@
 							]
 						}
 					],
-					"id": "877a88d1-ba8d-4776-bd65-9c3f00d8d0e5"
+					"id": "5f90dddc-c98c-464c-903e-ef09601531ae"
 				}
 			],
-			"id": "f24723d2-d3c0-4cc0-a1fd-c9a12185ee72"
+			"id": "8851bf0b-a629-49f0-80fc-3cc8e60fa099"
 		},
 		{
 			"name": "user",
@@ -1689,7 +1402,7 @@
 					"item": [
 						{
 							"name": "Creates list of users with given input array",
-							"id": "e61d5ce5-c69c-441b-91db-a21c0a2956a8",
+							"id": "2c879758-a493-4619-88c0-0b14c5d81506",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1724,7 +1437,7 @@
 							},
 							"response": [
 								{
-									"id": "2f1a8110-5cfb-46e2-9a24-db1860ec490c",
+									"id": "133f53e0-c1ab-4947-9fcf-8c81c4d3c981",
 									"name": "successful operation",
 									"originalRequest": {
 										"method": "POST",
@@ -1758,7 +1471,6 @@
 									"status": "Internal Server Error",
 									"code": 500,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": [],
 									"body": null
@@ -1766,14 +1478,14 @@
 							]
 						}
 					],
-					"id": "30235795-9ba4-4b30-ac08-5a2004a4ceef"
+					"id": "abb9d5a8-c75d-427f-8b87-5849fc54ff2c"
 				},
 				{
 					"name": "{username}",
 					"item": [
 						{
 							"name": "Get user by user name",
-							"id": "fc933754-04dd-4af3-af10-2dc7afb08873",
+							"id": "707f7a29-5e86-47b8-865e-af53f4c35271",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1805,7 +1517,7 @@
 							},
 							"response": [
 								{
-									"id": "7bfe94d4-b9c0-4f47-add3-649d0e0e1446",
+									"id": "fb66d9e7-376c-4f20-b224-96dccff1ba15",
 									"name": "successful operation",
 									"originalRequest": {
 										"method": "GET",
@@ -1834,19 +1546,18 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
 											"value": "application/json",
-											"uuid": "34a40aa8-0861-40ad-9b66-90d8ce7db03f"
+											"uuid": "e4fa64b8-6a74-46a3-80e4-fb1bfaa8309e"
 										}
 									],
 									"cookie": [],
 									"body": "{\n  \"id\": \"<long>\",\n  \"username\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"userStatus\": \"<integer>\"\n}"
 								},
 								{
-									"id": "e92cfb75-f787-45dc-8c15-3d322be7121f",
+									"id": "693fda43-a616-429b-9797-af3b33b0093d",
 									"name": "Invalid username supplied",
 									"originalRequest": {
 										"method": "GET",
@@ -1870,13 +1581,12 @@
 									"status": "Bad Request",
 									"code": 400,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": [],
 									"body": null
 								},
 								{
-									"id": "cc9ebbcf-79cf-4217-9710-12aa5ecb3d99",
+									"id": "dc394cb9-b82c-4d9e-8272-ddb5215dc489",
 									"name": "User not found",
 									"originalRequest": {
 										"method": "GET",
@@ -1900,7 +1610,6 @@
 									"status": "Not Found",
 									"code": 404,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": [],
 									"body": null
@@ -1909,7 +1618,7 @@
 						},
 						{
 							"name": "Updated user",
-							"id": "3d3e956d-2bb2-4848-9099-09377e7e0f8b",
+							"id": "f0ab2ff7-0100-43a9-921e-deb29da8e28c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1952,7 +1661,7 @@
 							},
 							"response": [
 								{
-									"id": "59bbbeae-3a73-4ad4-89ab-1cea9b300681",
+									"id": "d1ba5381-a6b8-44f7-bf32-6e7a6eff5342",
 									"name": "Invalid user supplied",
 									"originalRequest": {
 										"method": "PUT",
@@ -1991,13 +1700,12 @@
 									"status": "Bad Request",
 									"code": 400,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": [],
 									"body": null
 								},
 								{
-									"id": "c7cb8f4b-be1c-4398-9bda-7f58e0703d8b",
+									"id": "b2ebaadd-eb5d-4968-b012-3532bd4d048d",
 									"name": "User not found",
 									"originalRequest": {
 										"method": "PUT",
@@ -2036,7 +1744,6 @@
 									"status": "Not Found",
 									"code": 404,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": [],
 									"body": null
@@ -2045,7 +1752,7 @@
 						},
 						{
 							"name": "Delete user",
-							"id": "5b8e4879-782f-4625-9c32-821480cc7e24",
+							"id": "9df7d879-ade3-49e1-ac0d-63b1f8a3041a",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2073,7 +1780,7 @@
 							},
 							"response": [
 								{
-									"id": "fe90541a-f3ed-473c-990f-83d6ec064789",
+									"id": "7d95c638-1e03-4daa-9211-5841f36b6488",
 									"name": "Invalid username supplied",
 									"originalRequest": {
 										"method": "DELETE",
@@ -2097,13 +1804,12 @@
 									"status": "Bad Request",
 									"code": 400,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": [],
 									"body": null
 								},
 								{
-									"id": "61126535-b183-4db7-8834-6932863775ac",
+									"id": "c8ddbe75-3bcf-48da-96bb-073239762ff2",
 									"name": "User not found",
 									"originalRequest": {
 										"method": "DELETE",
@@ -2127,7 +1833,6 @@
 									"status": "Not Found",
 									"code": 404,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": [],
 									"body": null
@@ -2135,14 +1840,14 @@
 							]
 						}
 					],
-					"id": "7eeaac16-86dc-4691-96ee-25152272c7ee"
+					"id": "5cbe4e08-a59f-4f39-911f-7f7acee0e64a"
 				},
 				{
 					"name": "login",
 					"item": [
 						{
 							"name": "Logs user into the system",
-							"id": "c586df3b-b561-465d-9f4d-fbee49955932",
+							"id": "f1d65150-b85f-46b0-958f-30a1659aa9fe",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2179,7 +1884,7 @@
 							},
 							"response": [
 								{
-									"id": "692af124-7294-4d96-93d9-632432b7884e",
+									"id": "73faf0f6-27ff-4ecc-80e6-e8c743f63158",
 									"name": "successful operation",
 									"originalRequest": {
 										"method": "GET",
@@ -2215,12 +1920,11 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
 											"value": "application/json",
-											"uuid": "ecb472ec-b409-4af7-9946-c2087d123f82"
+											"uuid": "02e7acb9-ef23-44bf-9265-6760a8894ca6"
 										},
 										{
 											"disabled": false,
@@ -2230,7 +1934,7 @@
 											},
 											"key": "X-Expires-After",
 											"value": "<dateTime>",
-											"uuid": "d7d19843-f600-463b-8d4c-ebbdbd146155"
+											"uuid": "620a3eaa-5751-40d5-abeb-b5237bd1b070"
 										},
 										{
 											"disabled": false,
@@ -2240,14 +1944,14 @@
 											},
 											"key": "X-Rate-Limit",
 											"value": "<integer>",
-											"uuid": "30641488-daef-4d43-891f-a3a3594483ff"
+											"uuid": "381f04d6-18c9-487f-ba1d-f8121ee9369d"
 										}
 									],
 									"cookie": [],
 									"body": "<string>"
 								},
 								{
-									"id": "814c6145-df43-4471-8827-6bc57f0e36b3",
+									"id": "d966c51d-40cf-454d-b96d-58dc8ddd7869",
 									"name": "Invalid username/password supplied",
 									"originalRequest": {
 										"method": "GET",
@@ -2278,7 +1982,6 @@
 									"status": "Bad Request",
 									"code": 400,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": [],
 									"body": null
@@ -2286,14 +1989,14 @@
 							]
 						}
 					],
-					"id": "d9904321-dfb4-424f-afb7-c4bdf68cb21e"
+					"id": "abc9a34a-c3b3-4395-ab05-d964c777459f"
 				},
 				{
 					"name": "logout",
 					"item": [
 						{
 							"name": "Logs out current logged in user session",
-							"id": "f308a8d7-c77d-44fc-8977-a48a6518375f",
+							"id": "fcb34c24-0ffd-43fd-b87e-edbc2701dbc2",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2313,7 +2016,7 @@
 							},
 							"response": [
 								{
-									"id": "faa53eb8-7847-42a0-b898-b1f12217d15f",
+									"id": "8a048dd5-994e-4200-ba1b-309d9c57ba6b",
 									"name": "successful operation",
 									"originalRequest": {
 										"method": "GET",
@@ -2332,7 +2035,6 @@
 									"status": "Internal Server Error",
 									"code": 500,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": [],
 									"body": null
@@ -2340,14 +2042,14 @@
 							]
 						}
 					],
-					"id": "57c8a622-51eb-44b2-ad4c-bf9c49fbc718"
+					"id": "c2515a4e-a931-4283-a712-bf7fb0f42348"
 				},
 				{
 					"name": "createWithArray",
 					"item": [
 						{
 							"name": "Creates list of users with given input array",
-							"id": "2451848b-1614-45b5-bbe0-2899554943bd",
+							"id": "1258ffaa-47e4-4178-8366-1c784e6947ee",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2382,7 +2084,7 @@
 							},
 							"response": [
 								{
-									"id": "f609eda9-c4c6-4524-9a58-6fd9ca59770b",
+									"id": "3b6ff0a5-ce53-421b-8da0-f20974567960",
 									"name": "successful operation",
 									"originalRequest": {
 										"method": "POST",
@@ -2416,7 +2118,6 @@
 									"status": "Internal Server Error",
 									"code": 500,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": [],
 									"body": null
@@ -2424,11 +2125,11 @@
 							]
 						}
 					],
-					"id": "60953688-e2ac-4bd5-aae3-671a74506af0"
+					"id": "2d2a396a-c252-41af-bad8-a810d7e84987"
 				},
 				{
 					"name": "Create user",
-					"id": "031866d5-ab18-4054-9531-e98566050253",
+					"id": "e3c6ac54-580d-40e6-b7ec-e82d5a0b29e0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2463,7 +2164,7 @@
 					},
 					"response": [
 						{
-							"id": "724b9afb-fdc4-4a92-a642-d478695438a0",
+							"id": "75bee9d3-1cd4-4a32-bd09-934ebcc37eab",
 							"name": "successful operation",
 							"originalRequest": {
 								"method": "POST",
@@ -2496,7 +2197,6 @@
 							"status": "Internal Server Error",
 							"code": 500,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": [],
 							"body": null
@@ -2504,12 +2204,12 @@
 					]
 				}
 			],
-			"id": "a608b762-4986-4bf1-a1f0-529975be8cc9"
+			"id": "172160aa-7705-497d-9b4c-d0b6602f90c1"
 		}
 	],
 	"variable": [
 		{
-			"id": "be6da447-1f24-4d91-b54b-edcb779d4881",
+			"id": "048fa2eb-4e07-46ea-8a04-095673179a8e",
 			"key": "baseUrl",
 			"value": "https://petstore.swagger.io/v2"
 		}

@@ -1,13 +1,14 @@
 {
 	"info": {
-		"_postman_id": "cf3844bd-338f-4c1c-ad96-db53afba04ac",
+		"_postman_id": "1c72cb77-9d82-4985-a401-b1c0147db310",
 		"name": "DummyApi",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "4969429"
+		"_uid": "4969429-1c72cb77-9d82-4985-a401-b1c0147db310"
 	},
 	"item": [
 		{
 			"name": "Get All Employees",
+			"id": "a69fb4a4-0f41-4bd9-b1ee-0e7148ef44eb",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -44,7 +45,8 @@
 							""
 						],
 						"type": "text/javascript",
-						"packages": {}
+						"packages": {},
+						"id": "5ea4944c-f9be-4a0a-b251-a268732f2600"
 					}
 				},
 				{
@@ -66,10 +68,12 @@
 							""
 						],
 						"type": "text/javascript",
-						"packages": {}
+						"packages": {},
+						"id": "3309bf86-dbd4-4538-8257-5361f5cfc737"
 					}
 				}
 			],
+			"id": "b27e811e-df08-4680-a015-9a194fa6d496",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -105,10 +109,12 @@
 							""
 						],
 						"type": "text/javascript",
-						"packages": {}
+						"packages": {},
+						"id": "6ad838ae-3ed3-4b15-9bc9-8a03690f6195"
 					}
 				}
 			],
+			"id": "298885fd-ec7b-4932-98f0-4cf6270cdcfa",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -135,7 +141,8 @@
 				"packages": {},
 				"exec": [
 					""
-				]
+				],
+				"id": "689f131f-de6c-4e3a-bcdd-a3b08a9d181f"
 			}
 		},
 		{
@@ -145,12 +152,14 @@
 				"packages": {},
 				"exec": [
 					""
-				]
+				],
+				"id": "f8f09eb0-8197-478f-992e-f453573825b5"
 			}
 		}
 	],
 	"variable": [
 		{
+			"id": "5dff909c-59b9-4cb0-8fa4-6beb143a8a8a",
 			"key": "baseUrl",
 			"value": "https://dummy.restapiexample.com/employees",
 			"type": "string"

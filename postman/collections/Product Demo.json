@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "7f674b31-528f-4e87-9350-11af997f18bd",
+		"_postman_id": "fa5c7936-b95c-4548-be45-b7a4551b72ed",
 		"name": "Product Demo",
 		"description": "> Product Demo collections enable client-facing teams to easily demo API functions and use cases to potential customers. \n  \n\n## **🪐 Get started**\n\nThis collection serves as a resource for our internal teams to demo the Intergalactic Bank API to our customers and partners. It is expected that everyone using this collection is familiar with the basic concepts of the API, so the documentation is less instructional and more focused on highlighting the real-world use cases of the service.\n\n## **🎨Visualize Results**\n\n<img src=\"https://content.pstmn.io/93e76d66-edee-4d11-bf11-55028f7f238b/UHJvZHVjdGRlbW8uZ2lm\">\n\nThe Bank Services team, from the fictional Intergalactic Bank, often demo APIs to a wide audience: there may be developers, analysts, project managers, and other roles on the call. Though everyone is invested in the value the API can bring, not everyone is familiar with reading data in JSON format. That’s why we’ve invested in creating _visualizations_, which can help consumers see how the data returned from the API might benefit their teams, or fit into their existing app. Be sure to check the Visualize tab for each request that contains “visualize” in its name.\n\n## **📝Example responses**\n\nWhen deciding to use our API, our customers need to understand what data gets returned and the format of that data. We’ve documented many possible scenarios in our collection using **example responses**. This allows our team to walk through the different success and error responses for each request without having to change parameters to produce a response on the fly.\n\n## **🤝Collaborate with us!**\n\nThe Bank Services team wants your team’s input on our API demo. Do you have a use-case idea you think should be showcased here? Add an [inline comment](https://learning.postman.com/docs/collaborating-in-postman/working-with-your-team/discussing-your-work/) to this collection with your ideas, questions, and suggestions, or reach out to us on our internal Slack by tagging `@bank-services`.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "4969429-7f674b31-528f-4e87-9350-11af997f18bd"
+		"_uid": "4969429-fa5c7936-b95c-4548-be45-b7a4551b72ed"
 	},
 	"item": [
 		{
@@ -102,11 +102,11 @@
 									"var todayDate = moment().format('YYYY-MM-DD');",
 									"pm.visualizer.set(template, { res, todayDate });"
 								],
-								"id": "38645fa5-bed6-4e72-824d-870a491eb437"
+								"id": "1175158a-f295-4a2d-8f81-5e79d444436c"
 							}
 						}
 					],
-					"id": "07a79f42-ec9f-4a50-9725-a564243fb2b7",
+					"id": "ece9031e-a539-4e21-b939-94ff6c89e0ad",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -148,7 +148,7 @@
 					},
 					"response": [
 						{
-							"id": "953537ac-d6d4-4883-8a7d-9b9dec353200",
+							"id": "67cf84c8-4e42-4421-a11c-7363f77e36ba",
 							"name": "Successful Response",
 							"originalRequest": {
 								"method": "GET",
@@ -220,7 +220,7 @@
 							"body": "{\n    \"transactions\": [\n        {\n            \"id\": 11,\n            \"createdAt\": \"2024-02-17T14:24:41.000Z\",\n            \"fromAccountId\": 24,\n            \"toAccountId\": 26,\n            \"currency\": \"COSMIC_COINS\",\n            \"amount\": 100\n        },\n        {\n            \"id\": 10,\n            \"createdAt\": \"2024-02-17T14:12:15.000Z\",\n            \"fromAccountId\": 24,\n            \"toAccountId\": 25,\n            \"currency\": \"COSMIC_COINS\",\n            \"amount\": 250\n        }\n    ]\n}"
 						},
 						{
-							"id": "3623b331-9edd-4034-9349-74debedc2508",
+							"id": "025bad58-fa23-4d29-bf78-35d90f39d2f3",
 							"name": "No matching transactions found",
 							"originalRequest": {
 								"method": "GET",
@@ -280,7 +280,7 @@
 							"body": "{\n    \"transactions\": []\n}"
 						},
 						{
-							"id": "1f27e04f-3be2-408f-9fb2-f3c01dd573d8",
+							"id": "93ded976-209f-45be-a92e-f68b62aa4bd5",
 							"name": "Forbidden",
 							"originalRequest": {
 								"method": "GET",
@@ -468,11 +468,11 @@
 									"pm.visualizer.set(template, { res, createdAt });",
 									""
 								],
-								"id": "69b68ed5-1963-4bb4-9881-392d6756e554"
+								"id": "1fd044db-6117-48a5-b7e9-eade2bbea351"
 							}
 						}
 					],
-					"id": "a6cc1967-1e4d-4e37-8af6-5f32fbb6c082",
+					"id": "1881245d-b58e-47e7-a58b-a31dde6560ee",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -502,7 +502,7 @@
 					},
 					"response": [
 						{
-							"id": "26c78486-69f0-4de3-a8a8-ed20cedc4444",
+							"id": "3126c0f5-7dab-4738-b2cb-357e83e3ace0",
 							"name": "Successful Response",
 							"originalRequest": {
 								"method": "GET",
@@ -562,7 +562,7 @@
 							"body": "{\n    \"transaction\": {\n        \"id\": 10,\n        \"createdAt\": \"2024-02-17T14:12:15.000Z\",\n        \"fromAccountId\": 24,\n        \"toAccountId\": 25,\n        \"currency\": \"COSMIC_COINS\",\n        \"amount\": 250\n    }\n}"
 						},
 						{
-							"id": "fc02e9fc-cf11-4a0e-9a24-9589810b6831",
+							"id": "bc8a51d6-1fd4-4f34-b2e0-2c9fc68679c5",
 							"name": "Not found",
 							"originalRequest": {
 								"method": "GET",
@@ -622,7 +622,7 @@
 							"body": "{\n    \"name\": \"instanceNotFound\",\n    \"message\": \"Transaction does not exist.\"\n}"
 						},
 						{
-							"id": "580562a7-04dd-4887-a381-c363741a4df3",
+							"id": "b1f8826a-b0bc-4e1c-8b4b-b27600116b63",
 							"name": "Forbidden",
 							"originalRequest": {
 								"method": "GET",
@@ -684,7 +684,7 @@
 				},
 				{
 					"name": "Create New Transaction",
-					"id": "7b557da7-a553-46b8-ba1c-01acfa699c4f",
+					"id": "b1254512-0caa-41e7-a96a-c1948ea7f19c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -715,7 +715,7 @@
 					},
 					"response": [
 						{
-							"id": "85f1a567-806f-491a-ba02-3b6890fb673d",
+							"id": "1b0ee59b-da5c-438c-89b9-b168ca054fb7",
 							"name": "Successful Response",
 							"originalRequest": {
 								"method": "POST",
@@ -776,7 +776,7 @@
 							"body": "{\n    \"success\": true,\n    \"transaction\": {\n        \"id\": 11\n    }\n}"
 						},
 						{
-							"id": "08bbb533-913b-4bae-a9aa-e9071b855b00",
+							"id": "03b1edd0-37b1-4a39-acff-774b146ca87a",
 							"name": "Insufficient funds",
 							"originalRequest": {
 								"method": "POST",
@@ -818,7 +818,7 @@
 							"body": "{\n    \"name\": \"invalidBody\",\n    \"message\": \"Insufficient balance in fromAccountId to initiate the transaction.\"\n}"
 						},
 						{
-							"id": "ae901583-adb4-4d07-8d75-734e00f2bf2f",
+							"id": "50b367cc-d2ee-499d-96d4-17385b5af750",
 							"name": "Forbidden",
 							"originalRequest": {
 								"method": "POST",
@@ -872,7 +872,7 @@
 					]
 				}
 			],
-			"id": "6f9cadff-fae6-4274-983f-cad2f75935de",
+			"id": "3da63ec4-15ce-4efb-af84-06730b4e9ba7",
 			"description": "<img src=\"https://content.pstmn.io/2f912e6a-6eb0-410f-b74e-788c5bac6735/Q29pbi5wbmc=\" alt=\"Cosmic%20Coin\" width=\"112\" height=\"130\">\n\nA _**transaction**_ records money moving in or out of an account. Transactions at the Intergalactic Bank follow a blockchain-like approach. Once created, they cannot be updated or deleted.\n\nUse the **transaction** endpoints contained in this folder to...\n\n- <u>List transactions </u> \\- get all transactions from an account, with options to filter by date, or the account they were delivered to.\n- <u>Get a single transaction</u> - If you are looking to retrieve information about a specific transaction, provide a transaction `id` and receive information about the transaction.\n- <u>Create a new transaction</u> - create a new transfer or deposit transaction for a given account.\n    \n\nTransactions do not contain any information about the account balance. To inquire about account balances and other account-related details, please refer to the requests in the **Accounts** folder."
 		},
 		{
@@ -972,11 +972,11 @@
 									"var todayDate = moment().format('YYYY-MM-DD');",
 									"pm.visualizer.set(template, { res, todayDate });"
 								],
-								"id": "c083dd69-1d95-4aa3-9a02-0543c82b8581"
+								"id": "6ae0de3e-3e0e-48cc-8c96-24fe97ae3714"
 							}
 						}
 					],
-					"id": "6ddc9877-9cf9-4c54-a7bd-0511599f2189",
+					"id": "81785d4b-217c-4471-aade-5ac92abb9699",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1012,7 +1012,7 @@
 					},
 					"response": [
 						{
-							"id": "3279772b-0ec5-4377-b5fb-f14eeecc9f82",
+							"id": "cc7bb43a-cd55-45f4-a620-cb0ed83673f0",
 							"name": "Successful Response",
 							"originalRequest": {
 								"method": "GET",
@@ -1078,7 +1078,7 @@
 							"body": "{\n    \"accounts\": [\n        {\n            \"id\": 27,\n            \"owner\": \"Cooper Comet\",\n            \"balance\": 2013,\n            \"currency\": \"COSMIC_COINS\"\n        },\n        {\n            \"id\": 25,\n            \"owner\": \"Courtney Robel\",\n            \"balance\": 750,\n            \"currency\": \"COSMIC_COINS\"\n        },\n        {\n            \"id\": 26,\n            \"owner\": \"Nova Newman\",\n            \"balance\": 5100,\n            \"currency\": \"COSMIC_COINS\"\n        },\n        {\n            \"id\": 24,\n            \"owner\": \"Reyna Marquardt\",\n            \"balance\": 9999649,\n            \"currency\": \"COSMIC_COINS\"\n        },\n        {\n            \"id\": 29,\n            \"owner\": \"Rogers Hayes\",\n            \"balance\": 500,\n            \"currency\": \"COSMIC_COINS\"\n        },\n        {\n            \"id\": 28,\n            \"owner\": \"The Sun\",\n            \"balance\": 9999999998,\n            \"currency\": \"COSMIC_COINS\"\n        }\n    ]\n}"
 						},
 						{
-							"id": "48836159-5449-4650-abc2-c13a26c2c6e7",
+							"id": "68d9dd20-4724-4fa5-8d2e-62c5082c4b42",
 							"name": "No matching accounts found",
 							"originalRequest": {
 								"method": "GET",
@@ -1123,7 +1123,7 @@
 							"body": "{\n    \"accounts\": []\n}"
 						},
 						{
-							"id": "417a564e-b7a7-4e7b-930a-8ccdf7f3811d",
+							"id": "595dc507-520c-4678-aca7-0eafe05a8e52",
 							"name": "Forbidden",
 							"originalRequest": {
 								"method": "GET",
@@ -1293,11 +1293,11 @@
 									"pm.visualizer.set(template, { res, createdAt, now });",
 									""
 								],
-								"id": "a4c0ebef-6092-4319-a694-4fb1ae833cc9"
+								"id": "e16925e4-f955-4231-85cf-9a2183605096"
 							}
 						}
 					],
-					"id": "43985981-7f48-4ac6-a5a2-770f4a2e607e",
+					"id": "55546151-9f51-4871-bf7d-5908364ae393",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1327,7 +1327,7 @@
 					},
 					"response": [
 						{
-							"id": "6384cd3f-e0a4-4572-9bcf-ee77bd3d08c9",
+							"id": "89f0a1f1-5db2-40e9-8dee-53d0663bc559",
 							"name": "Successful Response",
 							"originalRequest": {
 								"method": "GET",
@@ -1387,7 +1387,7 @@
 							"body": "{\n    \"account\": {\n        \"id\": 26,\n        \"owner\": \"Nova Newman\",\n        \"balance\": 5100,\n        \"currency\": \"COSMIC_COINS\"\n    }\n}"
 						},
 						{
-							"id": "f4675bf0-6ff2-4577-8b52-c73d677e11c3",
+							"id": "b09d77f3-53fd-4eb5-a532-665bd8452fe4",
 							"name": "Not found",
 							"originalRequest": {
 								"method": "GET",
@@ -1446,7 +1446,7 @@
 							"body": "{\n    \"name\": \"instanceNotFound\",\n    \"message\": \"Account does not exist.\"\n}"
 						},
 						{
-							"id": "6ea3070e-a40e-4dbb-aecb-44b9a498cfe5",
+							"id": "c6f1967a-a349-4741-855e-7d1a124b9602",
 							"name": "Forbidden",
 							"originalRequest": {
 								"method": "GET",
@@ -1508,7 +1508,7 @@
 				},
 				{
 					"name": "Create New Account",
-					"id": "3487dbcd-0b44-4417-869d-3c5346781817",
+					"id": "3f16ba60-acb2-446d-8022-27c4d7f306f2",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1539,7 +1539,7 @@
 					},
 					"response": [
 						{
-							"id": "6419e8e2-76fc-4c47-b339-f97412d50777",
+							"id": "d907536d-d47e-4d0f-bea0-7c99a29b1c09",
 							"name": "Successful Response",
 							"originalRequest": {
 								"method": "POST",
@@ -1600,7 +1600,7 @@
 							"body": "{\n    \"account\": {\n        \"id\": 29\n    }\n}"
 						},
 						{
-							"id": "62c30613-a122-4cfb-96ab-3b1a99d66f08",
+							"id": "5f4e2a7b-7cb5-42fd-a94d-45bd7bd4685d",
 							"name": "Forbidden",
 							"originalRequest": {
 								"method": "POST",
@@ -1654,7 +1654,7 @@
 					]
 				}
 			],
-			"id": "f97bcd3e-6b00-4359-84c7-5d9c17f240ec",
+			"id": "0582b4d4-9ecf-4e34-83b2-3499efb91f7a",
 			"description": "<img src=\"https://content.pstmn.io/c1995eee-896d-4c9f-891a-a206bc16cc0b/c2F2ZS1tb25leS5wbmc=\" width=\"249\" height=\"158\">\n\nAn Account at the Intergalactic Bank allows you to store funds.\n\nUse the _**account**_ endpoints contained in this folder to...\n\n- <u>List accounts </u> \\- get all accounts that meet your search criteria.\n- <u>Get a single account</u> - If you are looking to retrieve information about a specific account, provide an account `id` and receive information about the account.\n- <u>Create a new account</u> - Create a new account\n    \n\nAccount endpoints do not return information about transactions. To retrieve transaction information, check out the requests in the **Transactions** folder."
 		}
 	],
@@ -1681,7 +1681,7 @@
 				"exec": [
 					""
 				],
-				"id": "9b0d01fb-f0ca-4473-84ae-a2fb285f0924"
+				"id": "d20e1e21-d9ca-4d04-bb90-828e89b8e7f2"
 			}
 		},
 		{
@@ -1691,7 +1691,7 @@
 				"exec": [
 					""
 				],
-				"id": "e4e0ad3f-90c4-461b-b600-4e9557a9a9bc"
+				"id": "f07e875b-f180-4543-bf17-c95f80e4c966"
 			}
 		}
 	],
