@@ -80,6 +80,9 @@
 				}
 			],
 			"id": "fe65cb72-1ac5-45fe-b08d-0ed160923ebd",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -160,6 +163,9 @@
 				}
 			],
 			"id": "faa4719a-5f9d-4cb9-b664-d5abd6b66da2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -190,6 +196,7 @@
 				{
 					"listen": "test",
 					"script": {
+						"id": "8c2ad41a-5c1b-4156-879a-3748fc5d9bbd",
 						"exec": [
 							"\r",
 							"",
@@ -223,11 +230,38 @@
 							"});"
 						],
 						"type": "text/javascript",
-						"id": "8c2ad41a-5c1b-4156-879a-3748fc5d9bbd"
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a4148aff-ab4a-4320-8f40-d477154c6963",
+						"exec": [
+							"//Local Variables\r",
+							"//pm.variables.set(\"userId\",1);\r",
+							"\r",
+							"//Environment Variables\r",
+							"//pm.environment.set(\"userId\",2);\r",
+							"\r",
+							"//Collection Variables\r",
+							"//pm.collectionVariables.set(\"userId\", 3);\r",
+							"//pm.collectionVariables.get(\"userId\");\r",
+							"\r",
+							"//Global Variables\r",
+							"//pm.globals.set(\"userId\", 4);\r",
+							"//pm.globals.get(\"userId\");\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
 			"id": "898401bb-8f0a-42f0-b562-4571ee623006",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -243,6 +277,38 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "8b71d2f5-55c0-4c56-8305-2726e4ed9dd0",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "73bafa3f-a6a9-4322-811b-d3f434cf6bb7",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "bd9c7248-6085-4c1d-b542-81464c9df818",
+			"key": "userId",
+			"value": "3",
+			"type": "string"
 		}
 	]
 }
