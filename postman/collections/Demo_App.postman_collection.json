@@ -241,16 +241,7 @@
 							"//Local Variables\r",
 							"//pm.variables.set(\"userId\",1);\r",
 							"\r",
-							"//Environment Variables\r",
-							"//pm.environment.set(\"userId\",2);\r",
 							"\r",
-							"//Collection Variables\r",
-							"//pm.collectionVariables.set(\"userId\", 3);\r",
-							"//pm.collectionVariables.get(\"userId\");\r",
-							"\r",
-							"//Global Variables\r",
-							"//pm.globals.set(\"userId\", 4);\r",
-							"//pm.globals.get(\"userId\");\r",
 							""
 						],
 						"type": "text/javascript",
@@ -305,7 +296,7 @@
 	],
 	"variable": [
 		{
-			"id": "bd9c7248-6085-4c1d-b542-81464c9df818",
+			"id": "d0291674-61aa-4903-b81d-0d0aa95fa359",
 			"key": "userId",
 			"value": "3",
 			"type": "string"
