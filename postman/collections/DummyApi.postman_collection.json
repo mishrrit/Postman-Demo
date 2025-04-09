@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "1c72cb77-9d82-4985-a401-b1c0147db310",
+		"name": "DummyApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "4969429-1c72cb77-9d82-4985-a401-b1c0147db310"
+	},
+	"item": [
+		{
+			"name": "Get All Employees",
+			"id": "a69fb4a4-0f41-4bd9-b1ee-0e7148ef44eb",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/employees",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Employee",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Extracting the ID from the response and storing it in an environment variable\r",
+							"pm.test(\"Extract and store employee ID from the response\", function () {\r",
+							"    var responseData = pm.response.json();\r",
+							"    var employeeId = responseData.id;\r",
+							"    pm.environment.set(\"employeeId\", employeeId);\r",
+							"});\r",
+							"\r",
+							"console.log(pm.request.body.raw);\r",
+							"console.log(pm.response.json());\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"id": "5ea4944c-f9be-4a0a-b251-a268732f2600"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"console.log(\"Name:\", pm.iterationData.get(\"name\"));\r",
+							"console.log(\"Salary:\", pm.iterationData.get(\"salary\"));\r",
+							"console.log(\"Age:\", pm.iterationData.get(\"age\"));\r",
+							"\r",
+							"\r",
+							"let requestBody = JSON.parse(pm.request.body.raw); // Parse the existing request body\r",
+							"\r",
+							"\r",
+							"// Convert back to JSON string\r",
+							"pm.request.body.raw = JSON.stringify(requestBody, null, 2);\r",
+							"\r",
+							"console.log(\"Updated Request Body:\", pm.request.body.raw);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"id": "3309bf86-dbd4-4538-8257-5361f5cfc737"
+					}
+				}
+			],
+			"id": "b27e811e-df08-4680-a015-9a194fa6d496",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"{{name}}\",\r\n    \"salary\": \"{{salary}}\",\r\n    \"age\": \"{{age}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/create",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"create"
+					]
+				},
+				"description": "### Create Resource\n\nThis endpoint allows you to create a new resource.\n\n#### Request Body\n\n- `name`: \"Add the variables in quotes.\"\n    \n\n#### Response\n\nThe response will contain the result of the create operation."
+			},
+			"response": []
+		},
+		{
+			"name": "Get an Employee",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"id": "6ad838ae-3ed3-4b15-9bc9-8a03690f6195"
+					}
+				}
+			],
+			"id": "298885fd-ec7b-4932-98f0-4cf6270cdcfa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/employee/{{employeeId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"employee",
+						"{{employeeId}}"
+					]
+				},
+				"description": "This endpoint retrieves information about a specific employee using the employee's ID. To use the stored employee ID from the previous request in the URL of the current request, reference it as {{employeeid}} in the URL path.\n\nThe last execution of this request returned a 404 status with an empty JSON response.\n\nThe last execution of this request returned a 404 status with an empty JSON response.\n\nThe last execution of this request returned a 404 status with an empty JSON response."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				],
+				"id": "689f131f-de6c-4e3a-bcdd-a3b08a9d181f"
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				],
+				"id": "f8f09eb0-8197-478f-992e-f453573825b5"
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "5dff909c-59b9-4cb0-8fa4-6beb143a8a8a",
+			"key": "baseUrl",
+			"value": "https://dummy.restapiexample.com/employees",
+			"type": "string"
+		}
+	]
+}

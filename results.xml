@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Sample Collection" tests="4" time="0.000">
+  <testsuite name="Get Users" id="34e98aa7-4c58-4faa-9194-17c1b976aa0a" timestamp="2025-03-16T15:53:24.596Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{baseurl}}
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Create User" id="3c34e9b6-67ba-4e17-9d31-3b76d9ed4bcc" timestamp="2025-03-16T15:53:24.596Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{baseurl}}
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Update User" id="812c5376-4ee2-4f13-bd7c-b2955248ceb4" timestamp="2025-03-16T15:53:24.596Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{baseurl}}
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Delete User" id="39711287-7ae8-4034-8967-3a22131e4761" timestamp="2025-03-16T15:53:24.596Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{baseurl}}
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)
+
+---
+]]></system-err>
+  </testsuite>
+</testsuites>
