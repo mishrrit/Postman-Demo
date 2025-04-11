@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "cb144eca-8d8e-43f2-9bf8-fbe6e397b2cb",
+		"name": "Demo_App-Pre Script_Post Response",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "4969429-cb144eca-8d8e-43f2-9bf8-fbe6e397b2cb"
+	},
+	"item": [
+		{
+			"name": "GetAllUsers",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6afeec7b-221d-4da2-b2e4-de427b9fec97",
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Content-Type header is application/json\", function () {",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
+							"});",
+							"",
+							"",
+							"pm.test(\"Data array structure is valid\", function () {",
+							"  const responseData = pm.response.json();",
+							"  ",
+							"  pm.expect(responseData.data).to.be.an('array').that.is.not.empty;",
+							"  ",
+							"  responseData.data.forEach(function(item) {",
+							"    pm.expect(item).to.have.property('id').that.is.a('number');",
+							"    pm.expect(item).to.have.property('email').that.is.a('string');",
+							"    pm.expect(item).to.have.property('first_name').that.is.a('string');",
+							"    pm.expect(item).to.have.property('last_name').that.is.a('string');",
+							"    pm.expect(item).to.have.property('avatar').that.is.a('string');",
+							"  });",
+							"});",
+							"",
+							"",
+							"pm.test(\"Email is in a valid format\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    responseData.data.forEach(function(user) {",
+							"        pm.expect(user.email).to.match(/^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$/);",
+							"    });",
+							"});",
+							"",
+							"",
+							"pm.test(\"Support object is present and contains expected fields\", function () {",
+							"    const responseData = pm.response.json();",
+							"",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.support).to.exist;",
+							"    pm.expect(responseData.support).to.have.property('url');",
+							"    pm.expect(responseData.support).to.have.property('text');",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is within acceptable range\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ddfd553b-a9c7-4003-83c3-258263d652f1",
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "9529af56-e471-437d-a0f8-17cd8e6cffb4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users"
+					]
+				},
+				"description": "This endpoint retrieves a list of users.\n\n### Request\n\nNo request body is required for this GET request.\n\n### Response\n\nThe response will be in JSON format with the following fields:\n\n- `page` (number): The current page number.\n    \n- `per_page` (number): The number of users per page.\n    \n- `total` (number): The total number of users.\n    \n- `total_pages` (number): The total number of pages.\n    \n- `data` (array): An array of user objects, each containing the following fields:\n    \n    - `id` (number): The user's ID.\n        \n    - `email` (string): The user's email address.\n        \n    - `first_name` (string): The user's first name.\n        \n    - `last_name` (string): The user's last name.\n        \n    - `avatar` (string): The URL of the user's avatar image.\n        \n- `support` (object): An object containing support information with the following fields:\n    \n    - `url` (string): The URL for support.\n        \n    - `text` (string): The support text."
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3f5ad67b-3228-4ad9-81b8-cf24bd3e9024",
+						"exec": [
+							"// Stores the userId in an environment or global variable",
+							"var userId = pm.response.json().id;",
+							"pm.environment.set(\"userId\", userId);",
+							"pm.test(\"Response status code is 201\", function () {",
+							"    pm.expect(pm.response.code).to.equal(201);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response has the required fields - name, job, id, and createdAt\", function () {",
+							"  const responseData = pm.response.json();",
+							"  ",
+							"  pm.expect(responseData).to.be.an('object');",
+							"  pm.expect(responseData).to.include.all.keys('name', 'job', 'id', 'createdAt');",
+							"});",
+							"",
+							"",
+							"pm.test(\"Name is a non-empty string\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.name).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Name should not be empty\");",
+							"});",
+							"",
+							"",
+							"pm.test(\"Job is a non-empty string\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.job).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Job should not be empty\");",
+							"});",
+							"",
+							"",
+							"pm.test(\"Id and createdAt are in valid format\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.id).to.be.a('string');",
+							"    pm.expect(responseData.createdAt).to.match(/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$/);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "8d2f4723-323d-4aec-8afa-e8ee729d5e6f",
+						"exec": [
+							"\r",
+							"//Set Authentication header\r",
+							"let token = \"Bearer abc123xyz\";  // Replace with actual token logic\r",
+							"pm.request.headers.add({ key: \"Authorization\", value: token });\r",
+							"console.log(\"Auth Token Set:\", token);\r",
+							"\r",
+							"//Generate Random email\r",
+							"let randomEmail = `user${Math.floor(Math.random() * 10000)}@example.com`;\r",
+							"pm.environment.set(\"email\", randomEmail);\r",
+							"console.log(\"Generated Email:\", randomEmail);\r",
+							"\r",
+							"//Generate random test data\r",
+							"let names = [\"Ritesh\",\"Rachit\",\"Reyaan\"];\r",
+							"let randomName = names[Math.floor(Math.random() * names.length)];\r",
+							"\r",
+							"pm.environment.set(\"randomName\", randomName);\r",
+							"pm.environment.set(\"randomAge\", Math.floor(Math.random() * 40) + 20);\r",
+							"console.log(\"Generated Name:\", randomName);\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "9cff64cd-638e-4d5a-a813-324736c3f4f9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"ritesh\",\r\n    \"job\": \"lead\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/users",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "aed152ab-fb62-473d-8989-1fb0619ddea3",
+						"exec": [
+							"",
+							"",
+							"pm.test(\"Response status code is 404\", function () {",
+							"  pm.expect(pm.response.code).to.equal(404);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response has the required Content-Type header\", function () {",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"  pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"packages": {},
+						"type": "text/javascript",
+						"id": "2ca57546-7324-4c83-9e5a-77a13122fbd5"
+					}
+				}
+			],
+			"id": "f5f61747-be0a-427f-a90b-dcdf9bc1bbd4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/{{userId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"{{userId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
